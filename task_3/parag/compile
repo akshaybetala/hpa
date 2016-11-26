@@ -1,0 +1,234 @@
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    board.c_find_common_libs_line2008_main.c board.c_find_common_libs_line2008_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o board.c_find_common_libs_line2008.vec -lcrypto -lssl -lm
+board.c_find_common_libs_line2008_main.c:1:61: fatal error: board.c_find_common_libs_line2008_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [board.c_find_common_libs_line2008.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    board.c_find_common_libs_line2012_main.c board.c_find_common_libs_line2012_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o board.c_find_common_libs_line2012.vec -lcrypto -lssl -lm
+board.c_find_common_libs_line2012_main.c:1:61: fatal error: board.c_find_common_libs_line2012_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [board.c_find_common_libs_line2012.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    board.c_find_common_libs_line2027_main.c board.c_find_common_libs_line2027_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o board.c_find_common_libs_line2027.vec -lcrypto -lssl -lm
+board.c_find_common_libs_line2027_main.c:1:61: fatal error: board.c_find_common_libs_line2027_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [board.c_find_common_libs_line2027.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    board.c_have_common_lib_line2073_main.c board.c_have_common_lib_line2073_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o board.c_have_common_lib_line2073.vec -lcrypto -lssl -lm
+In file included from board.c_have_common_lib_line2073_main.c:1:0:
+board.c_have_common_lib_line2073_main.c: In function 'main':
+../input/board.c_have_common_lib_line2073_1.ptrderefout.h:1:23: error: 'nil' undeclared (first use in this function)
+ #define lib_ (void *)(nil)
+                       ^
+board.c_have_common_lib_line2073_main.c:61:23: note: in expansion of macro 'lib_'
+         lib = (int *) lib_;
+                       ^
+../input/board.c_have_common_lib_line2073_1.ptrderefout.h:1:23: note: each undeclared identifier is reported only once for each function it appears in
+ #define lib_ (void *)(nil)
+                       ^
+board.c_have_common_lib_line2073_main.c:61:23: note: in expansion of macro 'lib_'
+         lib = (int *) lib_;
+                       ^
+board.c_have_common_lib_line2073_main.c:105:31: warning: format '%u' expects argument of type 'unsigned int *', but argument 3 has type 'unsigned char *' [-Wformat=]
+                 fscanf(pFile_,"%u", &unsigned_char_storage);
+                               ^
+board.c_have_common_lib_line2073_main.c:80:17: warning: ignoring return value of 'fscanf', declared with attribute warn_unused_result [-Wunused-result]
+                 fscanf(pFile_,"%d", &int_storage);
+                 ^
+board.c_have_common_lib_line2073_main.c:105:17: warning: ignoring return value of 'fscanf', declared with attribute warn_unused_result [-Wunused-result]
+                 fscanf(pFile_,"%u", &unsigned_char_storage);
+                 ^
+board.c_have_common_lib_line2073_loop.c: In function 'loop':
+board.c_have_common_lib_line2073_loop.c:22:20: warning: 'return' with a value, in function returning void
+             return 1;
+                    ^
+make: *** [board.c_have_common_lib_line2073.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    board.c_move_in_stack_line2637_main.c board.c_move_in_stack_line2637_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o board.c_move_in_stack_line2637.vec -lcrypto -lssl -lm
+board.c_move_in_stack_line2637_main.c:7:46: fatal error: board.c_move_in_stack_line2637_1.h: No such file or directory
+compilation terminated.
+board.c_move_in_stack_line2637_loop.c: In function 'loop':
+board.c_move_in_stack_line2637_loop.c:14:65: warning: 'return' with a value, in function returning void
+     for(k = cutoff; k < stackp; k++) if(stack[k] == pos) return 1;
+                                                                 ^
+make: *** [board.c_move_in_stack_line2637.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    board.c_play_move_line948_main.c board.c_play_move_line948_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o board.c_play_move_line948.vec -lcrypto -lssl -lm
+board.c_play_move_line948_main.c:7:41: fatal error: board.c_play_move_line948_1.h: No such file or directory
+compilation terminated.
+make: *** [board.c_play_move_line948.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    board.c_second_order_liberty_of_string_line2400_main.c board.c_second_order_liberty_of_string_line2400_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o board.c_second_order_liberty_of_string_line2400.vec -lcrypto -lssl -lm
+board.c_second_order_liberty_of_string_line2400_main.c:7:63: fatal error: board.c_second_order_liberty_of_string_line2400_1.h: No such file or directory
+compilation terminated.
+board.c_second_order_liberty_of_string_line2400_loop.c: In function 'loop':
+board.c_second_order_liberty_of_string_line2400_loop.c:16:499: warning: 'return' with a value, in function returning void
+     for(k = 0; k < 4; k++) if(board[pos + delta[k]] == 0 &&(board[pos + delta[k] +(19 + 1)] == board[str] && string_number[pos + delta[k] +(19 + 1)] == string_number[str] || board[pos + delta[k] - 1] == board[str] && string_number[pos + delta[k] - 1] == string_number[str] || board[pos + delta[k] -(19 + 1)] == board[str] && string_number[pos + delta[k] -(19 + 1)] == string_number[str] || board[pos + delta[k] + 1] == board[str] && string_number[pos + delta[k] + 1] == string_number[str])) return 1;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+make: *** [board.c_second_order_liberty_of_string_line2400.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    board.c_store_board_line343_main.c board.c_store_board_line343_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o board.c_store_board_line343.vec -lcrypto -lssl -lm
+board.c_store_board_line343_main.c:1:55: fatal error: board.c_store_board_line343_1.ptrderefout.h: No such file or directory
+compilation terminated.
+board.c_store_board_line343_loop.c: In function 'loop':
+board.c_store_board_line343_loop.c:33:42: error: 'move_history_color' undeclared (first use in this function)
+         state -> move_history_color[k] = move_history_color[k];
+                                          ^
+board.c_store_board_line343_loop.c:33:42: note: each undeclared identifier is reported only once for each function it appears in
+board.c_store_board_line343_loop.c:34:40: error: 'move_history_pos' undeclared (first use in this function)
+         state -> move_history_pos[k] = move_history_pos[k];
+                                        ^
+make: *** [board.c_store_board_line343.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    filllib.c_filllib_confirm_safety_line539_main.c filllib.c_filllib_confirm_safety_line539_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o filllib.c_filllib_confirm_safety_line539.vec -lcrypto -lssl -lm
+filllib.c_filllib_confirm_safety_line539_main.c:7:56: fatal error: filllib.c_filllib_confirm_safety_line539_1.h: No such file or directory
+compilation terminated.
+make: *** [filllib.c_filllib_confirm_safety_line539.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    filllib.c_filllib_confirm_safety_line548_main.c filllib.c_filllib_confirm_safety_line548_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o filllib.c_filllib_confirm_safety_line548.vec -lcrypto -lssl -lm
+filllib.c_filllib_confirm_safety_line548_main.c:7:56: fatal error: filllib.c_filllib_confirm_safety_line548_1.h: No such file or directory
+compilation terminated.
+make: *** [filllib.c_filllib_confirm_safety_line548.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    fuseki.c_search_fuseki_database_line306_main.c fuseki.c_search_fuseki_database_line306_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o fuseki.c_search_fuseki_database_line306.vec -lcrypto -lssl -lm
+fuseki.c_search_fuseki_database_line306_main.c:7:55: fatal error: fuseki.c_search_fuseki_database_line306_1.h: No such file or directory
+compilation terminated.
+make: *** [fuseki.c_search_fuseki_database_line306.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    genmove.c_test_symmetry_after_move_line733_main.c genmove.c_test_symmetry_after_move_line733_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o genmove.c_test_symmetry_after_move_line733.vec -lcrypto -lssl -lm
+genmove.c_test_symmetry_after_move_line733_main.c:7:58: fatal error: genmove.c_test_symmetry_after_move_line733_1.h: No such file or directory
+compilation terminated.
+make: *** [genmove.c_test_symmetry_after_move_line733.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    hash.c_hashdata_compare_line378_main.c hash.c_hashdata_compare_line378_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o hash.c_hashdata_compare_line378.vec -lcrypto -lssl -lm
+hash.c_hashdata_compare_line378_main.c:1:59: fatal error: hash.c_hashdata_compare_line378_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [hash.c_hashdata_compare_line378.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    hash.c_hashdata_recalc_line189_main.c hash.c_hashdata_recalc_line189_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o hash.c_hashdata_recalc_line189.vec -lcrypto -lssl -lm
+hash.c_hashdata_recalc_line189_main.c:1:58: fatal error: hash.c_hashdata_recalc_line189_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [hash.c_hashdata_recalc_line189.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    influence.c_do_compute_influence_line963_main.c influence.c_do_compute_influence_line963_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o influence.c_do_compute_influence_line963.vec -lcrypto -lssl -lm
+influence.c_do_compute_influence_line963_main.c:1:68: fatal error: influence.c_do_compute_influence_line963_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [influence.c_do_compute_influence_line963.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    influence.c_influence_get_moyo_segmentation_line1369_main.c influence.c_influence_get_moyo_segmentation_line1369_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o influence.c_influence_get_moyo_segmentation_line1369.vec -lcrypto -lssl -lm
+influence.c_influence_get_moyo_segmentation_line1369_main.c:1:80: fatal error: influence.c_influence_get_moyo_segmentation_line1369_1.ptrderefout.h: No such file or directory
+compilation terminated.
+influence.c_influence_get_moyo_segmentation_line1369_loop.c:43:15: error: redefinition of 'struct influence_data'
+ extern struct influence_data
+               ^
+influence.c_influence_get_moyo_segmentation_line1369_loop.c:15:8: note: originally defined here
+ struct influence_data
+        ^
+make: *** [influence.c_influence_get_moyo_segmentation_line1369.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    influence.c_influence_get_moyo_segmentation_line1379_main.c influence.c_influence_get_moyo_segmentation_line1379_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o influence.c_influence_get_moyo_segmentation_line1379.vec -lcrypto -lssl -lm
+influence.c_influence_get_moyo_segmentation_line1379_main.c:1:80: fatal error: influence.c_influence_get_moyo_segmentation_line1379_1.ptrderefout.h: No such file or directory
+compilation terminated.
+influence.c_influence_get_moyo_segmentation_line1379_loop.c:43:15: error: redefinition of 'struct influence_data'
+ extern struct influence_data
+               ^
+influence.c_influence_get_moyo_segmentation_line1379_loop.c:15:8: note: originally defined here
+ struct influence_data
+        ^
+make: *** [influence.c_influence_get_moyo_segmentation_line1379.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    influence.c_influence_get_moyo_segmentation_line1390_main.c influence.c_influence_get_moyo_segmentation_line1390_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o influence.c_influence_get_moyo_segmentation_line1390.vec -lcrypto -lssl -lm
+influence.c_influence_get_moyo_segmentation_line1390_main.c:1:80: fatal error: influence.c_influence_get_moyo_segmentation_line1390_1.ptrderefout.h: No such file or directory
+compilation terminated.
+influence.c_influence_get_moyo_segmentation_line1390_loop.c:53:15: error: redefinition of 'struct influence_data'
+ extern struct influence_data
+               ^
+influence.c_influence_get_moyo_segmentation_line1390_loop.c:25:8: note: originally defined here
+ struct influence_data
+        ^
+make: *** [influence.c_influence_get_moyo_segmentation_line1390.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    influence.c_init_influence_line336_main.c influence.c_init_influence_line336_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o influence.c_init_influence_line336.vec -lcrypto -lssl -lm
+influence.c_init_influence_line336_main.c:1:62: fatal error: influence.c_init_influence_line336_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [influence.c_init_influence_line336.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    influence.c_segment_influence_line1343_main.c influence.c_segment_influence_line1343_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o influence.c_segment_influence_line1343.vec -lcrypto -lssl -lm
+influence.c_segment_influence_line1343_main.c:1:66: fatal error: influence.c_segment_influence_line1343_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [influence.c_segment_influence_line1343.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    interface.c_gnugo_get_board_line350_main.c interface.c_gnugo_get_board_line350_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o interface.c_gnugo_get_board_line350.vec -lcrypto -lssl -lm
+interface.c_gnugo_get_board_line350_main.c:7:51: fatal error: interface.c_gnugo_get_board_line350_1.h: No such file or directory
+compilation terminated.
+make: *** [interface.c_gnugo_get_board_line350.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    matchpat.c_do_matchpat_line238_main.c matchpat.c_do_matchpat_line238_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o matchpat.c_do_matchpat_line238.vec -lcrypto -lssl -lm
+matchpat.c_do_matchpat_line238_main.c:7:46: fatal error: matchpat.c_do_matchpat_line238_1.h: No such file or directory
+compilation terminated.
+matchpat.c_do_matchpat_line238_loop.c: In function 'loop':
+matchpat.c_do_matchpat_line238_loop.c:15:14: error: stray '#' in program
+ void loop() {#pragma scop
+              ^
+matchpat.c_do_matchpat_line238_loop.c:15:15: error: unknown type name 'pragma'
+ void loop() {#pragma scop
+               ^
+matchpat.c_do_matchpat_line238_loop.c:17:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'for'
+ for(i = m - 1;i <= m + 2;++i) for(j = n - 1;j <= n + 2;(shift -= 2 , ++j)) {unsigned int this;if(!(((unsigned int )i) <((unsigned int )board_size) &&((unsigned int )j) <((unsigned int )board_size))) this = 3;else if((this = board[19 + 2 + i *(19 + 1) + j]) == 0) continue;else if(color == 2) this =(1 + 2) - this;merged_val |= this << shift;}
+ ^
+matchpat.c_do_matchpat_line238_loop.c:17:29: error: expected ';' before ')' token
+ for(i = m - 1;i <= m + 2;++i) for(j = n - 1;j <= n + 2;(shift -= 2 , ++j)) {unsigned int this;if(!(((unsigned int )i) <((unsigned int )board_size) &&((unsigned int )j) <((unsigned int )board_size))) this = 3;else if((this = board[19 + 2 + i *(19 + 1) + j]) == 0) continue;else if(color == 2) this =(1 + 2) - this;merged_val |= this << shift;}
+                             ^
+matchpat.c_do_matchpat_line238_loop.c:17:29: error: expected statement before ')' token
+make: *** [matchpat.c_do_matchpat_line238.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    movelist.c_movelist_move_known_line43_main.c movelist.c_movelist_move_known_line43_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o movelist.c_movelist_move_known_line43.vec -lcrypto -lssl -lm
+movelist.c_movelist_move_known_line43_main.c:1:65: fatal error: movelist.c_movelist_move_known_line43_1.ptrderefout.h: No such file or directory
+compilation terminated.
+movelist.c_movelist_move_known_line43_loop.c: In function 'loop':
+movelist.c_movelist_move_known_line43_loop.c:16:34: warning: 'return' with a value, in function returning void
+         if(codes[k] == 0) return 0;
+                                  ^
+movelist.c_movelist_move_known_line43_loop.c:17:38: warning: 'return' with a value, in function returning void
+         if(points[k] == move) return codes[k];
+                                      ^
+make: *** [movelist.c_movelist_move_known_line43.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    owl.c_owl_find_lunches_line4128_main.c owl.c_owl_find_lunches_line4128_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o owl.c_owl_find_lunches_line4128.vec -lcrypto -lssl -lm
+owl.c_owl_find_lunches_line4128_main.c:1:59: fatal error: owl.c_owl_find_lunches_line4128_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [owl.c_owl_find_lunches_line4128.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    owl.c_owl_substantial_line4496_main.c owl.c_owl_substantial_line4496_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o owl.c_owl_substantial_line4496.vec -lcrypto -lssl -lm
+owl.c_owl_substantial_line4496_main.c:1:58: fatal error: owl.c_owl_substantial_line4496_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [owl.c_owl_substantial_line4496.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    persistent.c_store_persistent_reading_cache_line488_main.c persistent.c_store_persistent_reading_cache_line488_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o persistent.c_store_persistent_reading_cache_line488.vec -lcrypto -lssl -lm
+persistent.c_store_persistent_reading_cache_line488_main.c:1:79: fatal error: persistent.c_store_persistent_reading_cache_line488_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [persistent.c_store_persistent_reading_cache_line488.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    readconnect.c_compute_connection_distances_line885_main.c readconnect.c_compute_connection_distances_line885_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o readconnect.c_compute_connection_distances_line885.vec -lcrypto -lssl -lm
+readconnect.c_compute_connection_distances_line885_main.c:1:78: fatal error: readconnect.c_compute_connection_distances_line885_1.ptrderefout.h: No such file or directory
+compilation terminated.
+make: *** [readconnect.c_compute_connection_distances_line885.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    reading.c_in_list_line4102_main.c reading.c_in_list_line4102_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o reading.c_in_list_line4102.vec -lcrypto -lssl -lm
+reading.c_in_list_line4102_main.c:1:54: fatal error: reading.c_in_list_line4102_1.ptrderefout.h: No such file or directory
+compilation terminated.
+reading.c_in_list_line4102_loop.c: In function 'loop':
+reading.c_in_list_line4102_loop.c:13:64: warning: 'return' with a value, in function returning void
+     for(k = 0; k < num_moves; k++) if(moves[k] == move) return 1;
+                                                                ^
+make: *** [reading.c_in_list_line4102.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    reading.c_tune_move_ordering_line4382_main.c reading.c_tune_move_ordering_line4382_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o reading.c_tune_move_ordering_line4382.vec -lcrypto -lssl -lm
+reading.c_tune_move_ordering_line4382_main.c:7:53: fatal error: reading.c_tune_move_ordering_line4382_1.h: No such file or directory
+compilation terminated.
+make: *** [reading.c_tune_move_ordering_line4382.vec] Error 1
+cc -O3 -g -std=c99 -I/home/zhi/benchmarks/common -I../input    worm.c_do_compute_effective_worm_sizes_line671_main.c worm.c_do_compute_effective_worm_sizes_line671_loop.c /home/zhi/benchmarks/common/dummy.o isolatedLoopUtility.a -o worm.c_do_compute_effective_worm_sizes_line671.vec -lcrypto -lssl -lm
+worm.c_do_compute_effective_worm_sizes_line671_main.c:29:6: error: expected identifier or '(' before ')' token
+ int(*)[4] restrict cw;
+      ^
+worm.c_do_compute_effective_worm_sizes_line671_main.c: In function 'main':
+worm.c_do_compute_effective_worm_sizes_line671_main.c:61:9: error: 'cw' undeclared (first use in this function)
+         cw = (int(*)[4]) cw_;
+         ^
+worm.c_do_compute_effective_worm_sizes_line671_main.c:61:9: note: each undeclared identifier is reported only once for each function it appears in
+worm.c_do_compute_effective_worm_sizes_line671_main.c:128:31: warning: format '%u' expects argument of type 'unsigned int *', but argument 3 has type 'unsigned char *' [-Wformat=]
+                 fscanf(pFile_,"%u", &unsigned_char_storage);
+                               ^
+worm.c_do_compute_effective_worm_sizes_line671_main.c:80:17: warning: ignoring return value of 'fscanf', declared with attribute warn_unused_result [-Wunused-result]
+                 fscanf(pFile_, "%d", &inputIndices[1]);
+                 ^
+worm.c_do_compute_effective_worm_sizes_line671_main.c:81:17: warning: ignoring return value of 'fscanf', declared with attribute warn_unused_result [-Wunused-result]
+                 fscanf(pFile_,"%d", &int_storage);
+                 ^
+worm.c_do_compute_effective_worm_sizes_line671_main.c:104:17: warning: ignoring return value of 'fscanf', declared with attribute warn_unused_result [-Wunused-result]
+                 fscanf(pFile_,"%d", &int_storage);
+                 ^
+worm.c_do_compute_effective_worm_sizes_line671_main.c:128:17: warning: ignoring return value of 'fscanf', declared with attribute warn_unused_result [-Wunused-result]
+                 fscanf(pFile_,"%u", &unsigned_char_storage);
+                 ^
+worm.c_do_compute_effective_worm_sizes_line671_loop.c:10:13: error: expected identifier or '(' before ')' token
+ extern int(*)[4] restrict cw;
+             ^
+worm.c_do_compute_effective_worm_sizes_line671_loop.c: In function 'loop':
+worm.c_do_compute_effective_worm_sizes_line671_loop.c:22:39: error: 'cw' undeclared (first use in this function)
+         for(k = 0; k < ncw[pos]; k++) cw[pos][k] = worms[pos][k];
+                                       ^
+worm.c_do_compute_effective_worm_sizes_line671_loop.c:22:39: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [worm.c_do_compute_effective_worm_sizes_line671.vec] Error 1
+make: Target `all' not remade because of errors.

@@ -1,0 +1,35 @@
+# CLooG script generated automatically by PLUTO 0.11.4
+# language: C
+c
+
+0 3
+
+1
+board_size 
+
+# Number of statements
+1
+
+# S1 (values[19 + 2 + m *(19 + 1) + n] = 0.0;)
+5 5
+1 1 0 0 0 
+1 -1 0 1 -1 
+1 0 0 1 -1 
+1 0 1 0 0 
+1 0 -1 1 -1 
+0 0 0
+
+# we want cloog to set the iterator names
+0
+
+# Number of scattering functions
+1
+
+# T(S1)
+2 7
+0 1 0 -20 -1 0 0 
+0 0 1 -1 0 0 0 
+
+# we will set the scattering dimension names
+2
+t1 t2 

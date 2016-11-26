@@ -1,0 +1,28 @@
+fname,RAR,RAW,TotalNumberOfDependencies,WAR,WAW,MeanCycle_fvec,MeanCycle_novec,MeanCycle_vec,Vector,factor
+influence.c_compute_escape_influence_line1557,0,0,0,0,0,2880,1,3475,True,5.13
+influence.c_compute_escape_influence_line1565,0,0,0,0,0,92,101,96,False,Vectorization not profitable
+influence.c_compute_escape_influence_line1569,0,0,0,0,0,25057,16185,15807,False,Vectorization not profitable
+influence.c_compute_escape_influence_line1605,0,0,0,0,0,11024,1,16109,False,Vectorization not profitable
+influence.c_compute_followup_influence_line1511,0,0,0,0,0,6243,38632,5566,True,4.95
+influence.c_do_compute_influence_line941,0,0,0,0,0,13652,53755,13833,True,5.73
+influence.c_find_influence_patterns_line890,0,0,0,0,0,37252,37003,35804,False,Dependence present (Any type)
+influence.c_store_delta_territory_cache_line1644,0,0,0,0,0,1181,6624,1086,True,6.28
+influence.c_value_territory_line1198,0,0,0,0,0,162493,168750,160848,False,Dependence present (Any type)
+matchpat.c_dfa_prepare_for_match_line512,0,0,0,0,0,14822,115716,15161,True,5.26
+matchpat.c_dfa_prepare_for_match_line517,0,0,0,0,0,14594,10592,16485,False,Inner loop was already vectorized
+move_reasons.c_add_lunch_line341,0,0,0,0,0,127,110,171,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+move_reasons.c_add_replacement_move_line1391,0,0,0,0,0,22005,21319,20227,False,Dependence present (Any type)
+move_reasons.c_find_connection_line145,0,0,0,0,0,99,99,98,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+move_reasons.c_find_eye_line244,0,0,0,0,0,122,110,192,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+move_reasons.c_remove_lunch_line366,0,0,0,0,0,127,121,125,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+optics.c_false_margin_line519,0,0,0,0,0,446,234,333,False,Vectorization not profitable
+optics.c_false_margin_line528,0,0,0,0,0,344,337,227,False,Vectorization not profitable
+owl.c_do_owl_analyze_semeai_line438,0,0,0,0,0,801,319,341,False,   remark #15553: loop was not vectorized: number of iterations (10) is insufficient for vectorizati
+owl.c_eat_lunch_escape_bonus_line4721,0,0,0,0,0,259,209,227,False,Vectorization not profitable
+owl.c_list_goal_worms_line5121,0,0,0,0,0,210,308,223,True,1.36
+owl.c_owl_escape_value_line4863,0,0,0,0,0,544,523,546,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+owl.c_owl_lively_line4407,0,0,0,0,0,504,495,607,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+owl.c_owl_lively_line4414,0,0,0,0,0,476,493,472,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+owl.c_owl_update_goal_line3481,0,0,0,0,0,213,242,203,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+persistent.c_mark_string_hotspot_values_line557,0,0,0,0,0,1,1,1,False,Dependence present (Any type)
+persistent.c_owl_hotspots_line930,0,0,0,0,0,884,6351,886,True,6.28

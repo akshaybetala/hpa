@@ -1,0 +1,53 @@
+SRCS = $(wildcard *.c)
+
+LOOPCOLLECTIONDIR=/home/akshay/Desktop/HPA/loops/445.gobmk
+HEADERFILEDIR=$(LOOPCOLLECTIONDIR)/input
+TIMERDIR=$(LOOPCOLLECTIONDIR)/common
+DUMMYDIR=$(LOOPCOLLECTIONDIR)/common
+CC=icc
+DUMMYSRC=$(DUMMYDIR)/dummy.c
+DUMMYOBJ=$(DUMMYSRC:.c=.o)
+
+STATICLIB=$(DUMMYDIR)/isolatedLoopUtility.a
+
+CFLAGS=-O3 -g -std=c99 -I$(TIMERDIR) -I$(HEADERFILEDIR)
+LDFLAGS=-lcrypto -lssl -lm
+
+ifeq ($(CC), gcc)
+    VECFLAGS = -ftree-vectorize 
+    NOVECFLAGS = -fno-tree-vectorize
+else ifeq ($(CC), icc)
+    VECFLAGS = -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5
+    FVECFLAGS = -xHost -vec-threshold0 -vec 
+    NOVECFLAGS = -no-vec
+else ifeq ($(CC), clang)
+    VECFLAGS = -fvectorize -fslp-vectorize -fslp-vectorize-aggressive 
+    NOVECFLAGS = -fno-vectorize -fno-slp-vectorize
+endif
+
+all:vec novec fvec
+
+novec: $(DUMMYOBJ) $(patsubst %_main.c,%.novec,$(SRCS))
+
+#vec: $(DUMMYOBJ) $(SRCS:.c=.vec)
+vec: $(DUMMYOBJ) $(patsubst %_main.c,%.vec,$(SRCS))
+fvec: $(DUMMYOBJ) $(patsubst %_main.c,%.fvec,$(SRCS))
+
+#all: $(SRCS:.c=)
+
+#.c:
+# $(CC) $(CFLAGS) $< $(DUMMYDIR)/dummy.c $(STATICLIB) -o $@ $(LDFLAGS)
+
+%.novec: %_main.c %_loop.c
+	$(CC) $(CFLAGS) $(NOVECFLAGS)  $^ $(DUMMYOBJ) $(STATICLIB) -o $@ $(LDFLAGS)
+
+%.vec: %_main.c %_loop.c
+	$(CC) $(CFLAGS) $(VECFLAGS) $^ $(DUMMYOBJ) $(STATICLIB) -o $@ $(LDFLAGS)
+	rm -f *main.optrpt
+%.fvec: %_main.c %_loop.c
+	$(CC) $(CFLAGS) $(FVECFLAGS) $^ $(DUMMYOBJ) $(STATICLIB) -o $@ $(LDFLAGS)
+	rm -f *main.optrpt
+
+clean:
+	rm -f *.o *.novec *.vec *.optrpt *.fvec
+

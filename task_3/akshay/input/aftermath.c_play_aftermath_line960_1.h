@@ -1,0 +1,11 @@
+int pos_ = 0;
+unsigned char board_[(19 + 2) *(19 + 1) + 1];
+int a_black_control_[(19 + 1) *(19 + 1)];
+int a_black_area_ = 0;
+int a_black_territory_ = 0;
+int a_white_prisoners_ = 0;
+int a_final_status_[(19 + 1) *(19 + 1)];
+int a_white_control_[(19 + 1) *(19 + 1)];
+int a_white_area_ = 0;
+int a_white_territory_ = 0;
+int a_black_prisoners_ = 0;

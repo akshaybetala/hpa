@@ -1,0 +1,10 @@
+int pos_ = 0;
+unsigned char board_[(19 + 2) *(19 + 1) + 1];
+int distance_[20 * 20];
+int k_ = 0;
+int delta_[8];
+int d_ = 0;
+int other_ = 2;
+int closest_opponent_ = 0;
+int color_ = 1;
+int closest_own_ = 0;

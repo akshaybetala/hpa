@@ -1,0 +1,793 @@
+.
+-bash: ./.: Is a directory
+./matchpat.c_dfa_prepare_for_match_line517.vec
+MD5_dfa_p: eb69cbce0da474e1a9407833c656c929
+
+j: 19
+i: 19
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1000	9635	1441	1009	1879	
+./aftermath.c_aftermath_genmove_line369.vec
+
+move: 279
+k: 2
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	154	26	18	29	
+./board.c_test_gray_border_line434.vec
+
+k: 1
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+21	103	32	21	19	
+./value_moves.c_record_top_move_line2681.vec
+MD5_best_moves: a206cfec98cc8caed29787248f32df24
+MD5_best_move_values: 3828e866d8506e27c1101b47bb5929db
+
+k: -1
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+27	668	69	31	137	
+./score.c_close_bubbles_line173.vec
+MD5_bubbles: a82c96afa60769b411c8e697c915f277
+
+found_one: 1
+ii: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+2783	6371	3315	2987	839	
+./influence.c_value_territory_line1198.vec
+
+k: 4
+ii: 400
+The checksum of the addresses of pointer variables is: 0xc5be00 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+11460	31631	13669	11658	4773	
+./hash.c_hashdata_invert_stone_line294.vec
+
+k: 1
+The checksum of the addresses of pointer variables is: 0xd4a620 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	37	20	18	5	
+./hash.c_hashdata_invert_ko_line262.vec
+
+i: 1
+The checksum of the addresses of pointer variables is: 0xd4a620 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	37	20	18	6	
+./influence.c_compute_escape_influence_line1557.vec
+MD5_cached_board: 6ad00f47d8ad4f12005b22b2caa48f78
+
+board_was_cached: 0
+ii: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+692	795	702	695	23	
+./board.c_get_last_opponent_move_line998.vec
+
+k: 20
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	69	22	18	12	
+./reading.c_simple_ladder_attack_line4728.vec
+
+moves: 
+k: 2
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+24	199	38	24	39	
+./worm.c_ping_cave_line1291.vec
+Segmentation fault (core dumped)
+./dragon.c_crude_dragon_weakness_line2057.vec
+MD5_weakness_value: 1fefb0d17465cf8692d7177841d6fa4d
+
+j: 3
+i: 3
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	105	25	18	19	
+./dragon.c_connected_to_eye_line1292.vec
+MD5_mx: 8a640a70fb46ea52adb19ea66d13b571
+
+k: 8
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+21	142	35	27	25	
+./combination.c_get_aa_status_line555.vec
+
+k: 1
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	69	24	18	12	
+./owl.c_modify_stupid_eye_vital_point_line2751.vec
+
+right: 20
+up: 1
+k: 4
+The checksum of the addresses of pointer variables is: 0x7fffffff1b3c 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	493	57	33	100	
+./reading.c_defend2_line1197.vec
+
+k: 2
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+21	6691	362	21	1452	
+./owl.c_list_goal_worms_line5121.vec
+MD5_goal_worm: a302a771ee0e3127b8950f0a67d17e49
+
+k: 15
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+27	54	32	27	8	
+./board.c_new_position_line2741.vec
+MD5_string_number: 4d159eaa938c2835faee700858d97e0a
+
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+725	983	756	747	55	
+./optics.c_next_map_line1379.vec
+MD5_used_index: 441018525208457705bf09a8ee3c1093
+MD5_map: 7e08e9fbb3d339f9b9e579737b691f81
+
+k: 1
+The checksum of the addresses of pointer variables is: 0x7fffffff337c 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	69	23	18	11	
+./reading.c_attack4_line3043.vec
+
+moves: 
+k: 0
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	360	37	18	74	
+./board.c_clear_board_line404.vec
+MD5_initial_board: b74f7c105d27ed8383f05c89fabeee31
+MD5_board: b74f7c105d27ed8383f05c89fabeee31
+
+k: 421
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1907	2638	2229	2371	262	
+./owl.c_do_owl_analyze_semeai_line438.vec
+
+k: 10
+The checksum of the addresses of pointer variables is: 0x9c28 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	384	45	21	78	
+./board.c_restore_board_line378.vec
+file not found in loadBenchStackToCurrentStack
+: No such file or directory
+./value_moves.c_remove_top_move_line2698.vec
+MD5_best_move_values: 419b232240d68b43eb64e78072d6e867
+MD5_best_moves: 18ad4b11d4cd51da0469ae7824804d18
+
+k: 10
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+42	568	78	45	114	
+./score.c_close_bubbles_line231.vec
+MD5_gb: 4862bfcc8596a8642142771fe29049c0
+
+ii: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1925	3436	2180	2038	387	
+./reading.c_defend3_line1420.vec
+
+k: 3
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	7420	398	21	1610	
+./influence.c_compute_escape_influence_line1569.vec
+MD5_escape_value: e07544f83741e05522853960df7db583
+
+ii: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1009	1197	1034	1028	41	
+./influence.c_compute_followup_influence_line1511.vec
+
+ii: 400
+The checksum of the addresses of pointer variables is: 0xd257c0 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1003	1248	1029	1006	56	
+./influence.c_compute_escape_influence_line1605.vec
+MD5_escape_values: fc1e133420cd65734ed792f703a2416e
+
+ii: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1009	1254	1035	1028	52	
+./influence.c_store_delta_territory_cache_line1644.vec
+MD5_delta_territory_cache: 4047ac6fa298b47577b3698a856f3899
+
+ii: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+108	215	134	130	20	
+./owl.c_owl_lively_line4414.vec
+
+lunch: 10
+The checksum of the addresses of pointer variables is: 0x23b08f0 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+24	63	37	33	10	
+./optics.c_false_margin_line528.vec
+
+all_lively: 0
+k: 4
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	381	41	18	78	
+./surround.c_compute_surroundings_line221.vec
+MD5_mn: 9bb55ac1eed0fe6a6764b07273ed4273
+
+n: 5
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+27	1010	87	30	212	
+./surround.c_compute_surroundings_line179.vec
+MD5_right_corner: 93e546698eb04d96c3c3c69df6011dca
+
+n: 4
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+36	230	56	36	46	
+./surround.c_compute_surroundings_line144.vec
+
+n: 2
+bottom_row: 7
+m: 6
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+586	916	617	605	70	
+./influence.c_compute_escape_influence_line1565.vec
+MD5_active_caches: 7dea362b3fac8e00956a4952a3d4f474
+
+k: 2
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	45	22	18	8	
+./combination.c_get_aa_value_line1164.vec
+
+value: 4
+k: 1
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	103	27	18	18	
+./value_moves.c_estimate_strategical_value_line1935.vec
+MD5_dragon_value: 6ad00f47d8ad4f12005b22b2caa48f78
+
+aa: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+66	169	87	85	22	
+./worm.c_ping_cave_line1298.vec
+MD5_mse: 3ecb913b36f930061a65d055f60c8815
+
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+625	1049	666	645	91	
+./value_moves.c_print_top_moves_line2656.vec
+MD5_best_move_values: fd4b38e94292e00251b9f39c47ee5710
+MD5_best_moves: fd4b38e94292e00251b9f39c47ee5710
+
+k: 10
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	51	22	18	9	
+./aftermath.c_aftermath_genmove_line173.vec
+MD5_under_control: b7c572402201eeb3e033bda6b5191227
+
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+819	952	831	823	28	
+./hash.c_hashdata_invert_stone_line287.vec
+
+k: 1
+The checksum of the addresses of pointer variables is: 0xd4a620 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	37	19	18	5	
+./aftermath.c_aftermath_genmove_line548.vec
+
+move: 142
+best_score: 25
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1623	2125	1726	1703	115	
+./filllib.c_filllib_confirm_safety_line511.vec
+
+apos: 55
+k: 0
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	130	26	18	24	
+./hash.c_hashdata_recalc_line245.vec
+
+i: 1
+The checksum of the addresses of pointer variables is: 0xd4a620 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	60	22	18	10	
+./board.c_count_common_libs_line1940.vec
+MD5_ml: 5910904bf8f36ae929a6a6e52aca76c7
+
+k: 4
+The checksum of the addresses of pointer variables is: 0xc23e50 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	312	37	18	63	
+./owl.c_owl_lively_line4407.vec
+
+lunch: 10
+The checksum of the addresses of pointer variables is: 0x23b94d8 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	103	33	30	18	
+./board.c_findstones_line2121.vec
+
+pos: 45
+k: 1
+The checksum of the addresses of pointer variables is: 0x7fffffff8720 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	148	30	18	28	
+./owl.c_owl_escape_value_line4863.vec
+
+k: 8
+The checksum of the addresses of pointer variables is: 0x23b94d8 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+24	196	40	24	38	
+./surround.c_compute_surroundings_line267.vec
+MD5_mn: b2c9c252b2b1fe7ced8d8217b4b221c2
+
+k: 4
+dpos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+964	1584	1038	980	143	
+./persistent.c_store_persistent_reading_cache_line485.vec
+MD5_active: a75d7d422fd00bf31208b013e74d8394
+
+r: 0
+The checksum of the addresses of pointer variables is: 0xcfa680 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	40	23	18	8	
+./worm.c_do_compute_effective_worm_sizes_line671.vec
+
+k: 2
+pos: 400
+The checksum of the addresses of pointer variables is: 0x3f00 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+2218	7864	2642	2265	1238	
+./persistent.c_store_persistent_reading_cache_line472.vec
+MD5_active: fe76626d94e7f7bfee979abf9b31b83e
+
+k: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+2339	3980	2560	2391	410	
+./fuseki.c_set_symmetries_line89.vec
+
+j: 19
+diagonally_symmetric: 1
+horizontally_symmetric: 1
+vertically_symmetric: 1
+i: 19
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+2411	2732	2462	2445	67	
+./utils.c_superstring_add_string_line1785.vec
+MD5_ml: 371df1c52a46ebc84e5bfa1518259bbe
+
+k: 3
+The checksum of the addresses of pointer variables is: 0xa0 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+21	209	46	36	39	
+./persistent.c_owl_hotspots_line930.vec
+MD5_values: 6ad00f47d8ad4f12005b22b2caa48f78
+
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+69	157	89	89	21	
+./aftermath.c_play_aftermath_line934.vec
+MD5_current_board: 6ad00f47d8ad4f12005b22b2caa48f78
+
+cached_board: 0
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+695	880	711	698	39	
+./reading.c_defend4_line1621.vec
+
+k: 4
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+24	6316	349	27	1369	
+./influence.c_accumulate_influence_line285.vec
+MD5_queue: 5173661d1289302d6bf2326019f0ab92
+MD5_working: 12377d80bf6a38e433b07dc79525d3eb
+
+queue_end: 9
+d: 8
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+69	840	121	88	165	
+./influence.c_compute_followup_influence_line1483.vec
+MD5_int_permeabilities: 7fe7186e136c152d4902caf68cfb4eeb
+
+ii: 400
+The checksum of the addresses of pointer variables is: 0xd257c0 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1647	1731	1696	1697	17	
+./influence.c_accumulate_influence_line178.vec
+MD5_working: 6ad00f47d8ad4f12005b22b2caa48f78
+
+ii: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+69	185	90	88	26	
+./hash.c_hashdata_recalc_line196.vec
+
+i: 0
+pos: 400
+The checksum of the addresses of pointer variables is: 0x6f6380 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1139	1647	1240	1188	131	
+./fuseki.c_openregion_line72.vec
+
+y: 19
+x: 8
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+184	426	209	191	51	
+./influence.c_find_influence_patterns_line890.vec
+
+ii: 400
+The checksum of the addresses of pointer variables is: 0xc5be00 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1647	4267	1956	1759	571	
+./influence.c_accumulate_influence_line296.vec
+MD5_influence: 90f597d1ec14ade923d0a7bb6379f6ff
+MD5_working: 6ad00f47d8ad4f12005b22b2caa48f78
+
+ii: 36
+k: 104
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+371	562	409	400	37	
+./surround.c_compute_surroundings_line313.vec
+
+surrounded: 1
+dpos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1136	1402	1162	1148	56	
+./reading.c_break_chain2_defense_moves_line3931.vec
+
+k: 4
+moves: 0x7fffffff1440
+The checksum of the addresses of pointer variables is: 0x7fffffff1440 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	952	66	18	203	
+./owl.c_eat_lunch_escape_bonus_line4721.vec
+
+adjoins: 0
+n: 2
+The checksum of the addresses of pointer variables is: 0x23dc478 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	48	23	18	9	
+./dragon.c_dragon_escape_line1729.vec
+MD5_mx: 943ec72babcf5eef9a522b0d156b79b2
+MD5_queue: 46bceef6d99000e395020027ee68ebc3
+
+queue_end: 2
+ii: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1595	1910	1638	1614	68	
+./reading.c_attack_threats_line966.vec
+
+num_threats: 0
+The checksum of the addresses of pointer variables is: 0xbc32f0 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	121	25	18	22	
+./reading.c_edge_closing_backfill_line3600.vec
+
+number_o: 0
+number_x: 0
+cpos: 0
+bpos: 0
+k: 4
+The checksum of the addresses of pointer variables is: 0x7fffffff1ed0 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	85	29	18	18	
+./owl.c_owl_update_goal_line3481.vec
+
+do_add: 1
+k: 1
+The checksum of the addresses of pointer variables is: 0x23c20c0 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	194	30	18	40	
+./influence.c_do_compute_influence_line941.vec
+MD5_int_black_permeabilities: 112214b841f9002a2fa696e3dca3828c
+MD5_int_white_permeabilities: 18622e11ecd25a52bbc5265bb8223071
+
+ii: 400
+The checksum of the addresses of pointer variables is: 0xc5be00 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1314	1850	1366	1345	111	
+./surround.c_compute_surroundings_line131.vec
+MD5_left_corner: 93e546698eb04d96c3c3c69df6011dca
+
+n: 4
+top_row: 3
+m: 4
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+178	435	208	181	62	
+./persistent.c_reading_hotspots_line602.vec
+MD5_values: 6ad00f47d8ad4f12005b22b2caa48f78
+
+n: 19
+m: 19
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+187	1843	295	206	356	
+./board.c_have_common_lib_line2073.vec
+
+k: 2
+The checksum of the addresses of pointer variables is: 0xc23880 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+30	214	51	31	51	
+./move_reasons.c_find_connection_line145.vec
+
+k: 0
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	85	29	24	15	
+./surround.c_compute_surroundings_line223.vec
+MD5_mn: b5f5b08a282803ccb023f6cf12015ff4
+
+n: 3
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+27	713	73	33	147	
+./move_reasons.c_remove_lunch_line366.vec
+
+k: 0
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	72	22	18	12	
+./persistent.c_mark_string_hotspot_values_line557.vec
+MD5_values: b28dea959da8fed835c555cedb2a4a76
+
+j: 2
+i: 2
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+27	315	49	30	61	
+./matchpat.c_dfa_prepare_for_match_line512.vec
+MD5_dfa_p: 9d772afcaa720f24d0a3a224be4e0cc7
+
+ii: 7056
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1562	15465	2363	1584	3030	
+./dragon.c_compute_surrounding_moyo_sizes_line1968.vec
+MD5_moyo_values: 6ad00f47d8ad4f12005b22b2caa48f78
+MD5_moyo_sizes: 6ad00f47d8ad4f12005b22b2caa48f78
+
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+181	357	198	181	38	
+./persistent.c_store_persistent_owl_cache_line755.vec
+MD5_active: 57b800cf3371b9037bc4c8e2f2e86b76
+
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1076	1738	1174	1109	143	
+./aftermath.c_aftermath_genmove_line142.vec
+MD5_distance: d9693cf177fd5969a2a98fa4f35e36ec
+
+something_found: 1
+closest_own: 0
+closest_opponent: 0
+k: 0
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+4784	6465	4900	4805	361	
+./optics.c_false_margin_line519.vec
+
+neighbors: 3
+k: 4
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	121	29	18	22	
+./reading.c_clear_safe_move_cache_line4519.vec
+MD5_safe_move_cache_when: da02419004ac9440ef4b2daf63a93f5c
+
+k: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+266	360	272	269	20	
+./influence.c_value_territory_line1238.vec
+
+ii: 400
+The checksum of the addresses of pointer variables is: 0xc5be00 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+1481	5304	1938	1580	950	
+./surround.c_compute_surroundings_line298.vec
+
+surrounded: 0
+n: 19
+m: 19
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+918	1571	1021	958	157	
+./fuseki.c_choose_corner_move_line178.vec
+
+q: -13
+i: 3
+The checksum of the addresses of pointer variables is: 0xb2d5d8 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	112	24	18	20	
+./board.c_count_common_libs_line1956.vec
+
+commonlibs: 1
+k: 6
+The checksum of the addresses of pointer variables is: 0xc28cc8 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+60	816	115	71	164	
+./surround.c_compute_surroundings_line395.vec
+
+pos: 400
+The checksum of the addresses of pointer variables is: 0x23b0534 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+734	1103	787	757	85	
+./aftermath.c_play_aftermath_line960.vec
+open: No such file or directory
+./readconnect.c_find_connection_moves_line767.vec
+
+r: 6
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	166	29	21	31	
+./utils.c_superstring_add_string_line1764.vec
+Segmentation fault (core dumped)
+./board.c_stones_on_board_line2672.vec
+
+black_stones: 0
+white_stones: 0
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+547	689	562	547	32	
+./move_reasons.c_add_replacement_move_line1391.vec
+MD5_replacement_map: b753cef03dcde80bb62b04fe2e54c745
+
+pos: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+613	982	651	636	77	
+./fuseki.c_choose_corner_move_line174.vec
+
+sum_of_weights: 100
+i: 8
+The checksum of the addresses of pointer variables is: 0xb2d5d8 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	54	23	18	10	
+./move_reasons.c_add_lunch_line341.vec
+
+k: 0
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	82	24	18	14	
+./movelist.c_movelist_change_point_line66.vec
+
+k: 10
+The checksum of the addresses of pointer variables is: 0xbc7ff8 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+24	405	51	27	81	
+./move_reasons.c_find_eye_line244.vec
+
+k: 0
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+18	45	24	18	9	
+./persistent.c_store_persistent_reading_cache_line461.vec
+MD5_active: e4b8d531b2fc181365bf392257ae3f88
+
+k: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+2242	6994	2658	2261	1092	
+./persistent.c_store_persistent_reading_cache_line424.vec
+MD5_active: c18cbcf38450820b8dab02fc61681958
+
+k: 400
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+57	822	109	75	165	
+./board.c_count_common_libs_line1944.vec
+
+commonlibs: 2
+k: 4
+The checksum of the addresses of pointer variables is: 0xc23880 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+24	284	43	27	56	
+./influence.c_compute_followup_influence_line1455.vec
+MD5_goal: 927c9242aaf2c53e30563ca022bc4955
+
+ii: 400
+The checksum of the addresses of pointer variables is: 0xd257c0 
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+719	955	763	745	61	
+./influence.c_accumulate_influence_line277.vec
+MD5_queue: 572852768f2280a325ca180bfbba00d6
+MD5_working: 4a8864c240aaddcfd2377c0b9f80dccb
+
+queue_end: 5
+d: 4
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+48	792	95	52	160	
+./readconnect.c_find_connection_moves_line716.vec
+MD5_moves: 7e3376b9aa0e2cddc7f41c5c7fe334d4
+MD5_distances: 4ac86b5c2783dbc2e933e44c8723f07b
+
+j: 6
+i: 6
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+54	368	91	69	74	
+./cache.c_hashtable_partially_clear_line317.vec
+MD5_statistics: f1084a10edd9af76c3e8ec16f8ac76f8
+
+l: 20
+k: 7
+Simulation time (cycles) stats:
+ min	max	mean	median	stdv
+169	393	196	191	46	
+./reading.c_order_moves_line4327.vec
+Segmentation fault (core dumped)
