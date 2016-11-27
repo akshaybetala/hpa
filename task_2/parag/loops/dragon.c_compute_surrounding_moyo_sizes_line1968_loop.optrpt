@@ -1,0 +1,48 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -I/home/varun/hpa/task_2/varun/loops/common -I/home/varun/hpa/task_2/varun/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o dragon.c_compute_surrounding_moyo_sizes_line1968.vec -lcrypto -lssl -lm
+
+Begin optimization report for: loop()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at dragon.c_compute_surrounding_moyo_sizes_line1968_loop.c(12,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at dragon.c_compute_surrounding_moyo_sizes_line1968_loop.c(12,5)
+   remark #15389: vectorization support: reference moyo_sizes[pos] has unaligned access   [ dragon.c_compute_surrounding_moyo_sizes_line1968_loop.c(14,9) ]
+   remark #15388: vectorization support: reference moyo_values[pos] has aligned access   [ dragon.c_compute_surrounding_moyo_sizes_line1968_loop.c(15,9) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.812
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 5.080 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at dragon.c_compute_surrounding_moyo_sizes_line1968_loop.c(12,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference moyo_sizes[pos] has unaligned access   [ dragon.c_compute_surrounding_moyo_sizes_line1968_loop.c(14,9) ]
+   remark #15388: vectorization support: reference moyo_values[pos] has aligned access   [ dragon.c_compute_surrounding_moyo_sizes_line1968_loop.c(15,9) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.625
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at dragon.c_compute_surrounding_moyo_sizes_line1968_loop.c(12,5)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
