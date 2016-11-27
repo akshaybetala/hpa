@@ -18,8 +18,8 @@ void loop()
 // lool invariant variable model
 	int x = (19 + 1) *(19 + 1);
 	for(ii = 19 + 2; ii <x; ii++){
-		int cond = (int)(board[ii] != 3);
-		escape_value[ii] = escape_value[ii]*(1-cond) +  cond*escape_values[ii][cache_number];
+		int cond = (board[ii] == 3);
+		escape_value[ii] *= 1*cond +  (1-cond)*escape_values[ii][cache_number];
 	}
 
 #pragma endscop

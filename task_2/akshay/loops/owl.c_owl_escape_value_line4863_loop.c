@@ -65,20 +65,13 @@ extern struct local_owl_data* restrict current_owl_data;
 void loop()
 {
 #pragma scop
-
+/*
     for(k = 0; k < 8; k++) if(board[pos + delta[k]] != 3 && current_owl_data -> goal[pos + delta[k]]) return - 10;
+*/
+    int cond[8];
+    for(k = 0; k < 8 && (board[pos + delta[k]] == 3 || current_owl_data -> goal[pos + delta[k]]==0); k++);
+    if(k < 8) return - 10;
 
-
-    // bool cc = false;
-    // for(k = 0; k < 8; k++) {
-    //     if(board[pos + delta[k]] != 3 && current_owl_data -> goal[pos + delta[k]]) {
-    //         cc = true;
-    //     }
-    // }
-
-    // if(cc==true) {
-    //     return - 10;
-    // }
 
 #pragma endscop
 }

@@ -72,11 +72,9 @@ void loop()
     }
 
 */
-    int temp;
     for(k = 0; k < 10; k++)
     {
-        temp = owla -> lunch[k];
-        owla -> lunch[k] *= 1-(int)(owlb -> goal[temp]);
+        owla -> lunch[k] *= owlb -> goal[owla -> lunch[k]]==0;
     }
 
 

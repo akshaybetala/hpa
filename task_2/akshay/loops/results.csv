@@ -1,28 +1,28 @@
 ,fname,MeanCycle_fvec,MeanCycle_novec,MeanCycle_vec,Vector,factor
-0,influence.c_compute_escape_influence_line1557,2926,1,3431,True,5.130
-1,influence.c_compute_escape_influence_line1565,96,133,92,False,Vectorization not profitable
-2,influence.c_compute_escape_influence_line1569,13172,24758,15588,True,4.160
-3,influence.c_compute_escape_influence_line1605,10550,1,18424,False,Vectorization not profitable
-4,influence.c_compute_followup_influence_line1511,5419,26193,5679,True,5.940
-5,influence.c_do_compute_influence_line941,16894,52974,15216,True,5.730
-6,influence.c_find_influence_patterns_line890,41804,52087,51606,True,1.020
-7,influence.c_store_delta_territory_cache_line1644,1147,8272,1165,True,6.280
-8,influence.c_value_territory_line1198,160919,220166,182409,True,4.500
-9,matchpat.c_dfa_prepare_for_match_line512,25685,114858,19702,True,5.260
-10,matchpat.c_dfa_prepare_for_match_line517,981,849,719,False,Vectorization not profitable
-11,move_reasons.c_add_lunch_line341,318,172,285,True,4.310
-12,move_reasons.c_add_replacement_move_line1391,1,19528,1,True,4.480
-13,move_reasons.c_find_connection_line145,277,175,287,True,4.340
-14,move_reasons.c_find_eye_line244,324,160,319,True,3.990
-15,move_reasons.c_remove_lunch_line366,313,177,298,True,4.310
-16,optics.c_false_margin_line519,432,208,219,False,Vectorization not profitable
-17,optics.c_false_margin_line528,400,135,171,False,Vectorization not profitable
-18,owl.c_do_owl_analyze_semeai_line438,597,513,706,True,1.440
-19,owl.c_eat_lunch_escape_bonus_line4721,253,233,257,True,1.090
-20,owl.c_list_goal_worms_line5121,191,309,191,True,1.360
-21,owl.c_owl_escape_value_line4863,551,507,711,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-22,owl.c_owl_lively_line4407,592,685,601,True,2.020
-23,owl.c_owl_lively_line4414,611,671,580,True,2.020
-24,owl.c_owl_update_goal_line3481,539,342,935,True,2.680
-25,persistent.c_mark_string_hotspot_values_line557,1,1,1,False,Dependence present (Any type)
-26,persistent.c_owl_hotspots_line930,916,6391,1139,True,6.280
+0,influence.c_compute_escape_influence_line1557,109,1,109,True,6.960
+1,influence.c_compute_escape_influence_line1565,96,138,96,False,Vectorization not profitable
+2,influence.c_compute_escape_influence_line1569,12915,26242,23113,True,4.420
+3,influence.c_compute_escape_influence_line1605,20190,1,20509,True,3.240
+4,influence.c_compute_followup_influence_line1511,5364,16312,5473,True,5.940
+5,influence.c_do_compute_influence_line941,14111,54575,13863,True,5.730
+6,influence.c_find_influence_patterns_line890,38738,38417,39040,False,Dependence present (Any type)
+7,influence.c_store_delta_territory_cache_line1644,1135,6465,1094,True,6.280
+8,influence.c_value_territory_line1198,168721,255105,169132,True,4.500
+9,matchpat.c_dfa_prepare_for_match_line512,17665,131744,15442,True,5.260
+10,matchpat.c_dfa_prepare_for_match_line517,974,878,747,False,Vectorization not profitable
+11,move_reasons.c_add_lunch_line341,307,207,320,True,4.310
+12,move_reasons.c_add_replacement_move_line1391,1,16460,1,True,4.480
+13,move_reasons.c_find_connection_line145,278,171,278,True,4.340
+14,move_reasons.c_find_eye_line244,298,186,305,True,3.990
+15,move_reasons.c_remove_lunch_line366,284,293,284,True,4.310
+16,optics.c_false_margin_line519,431,217,215,False,Vectorization not profitable
+17,optics.c_false_margin_line528,436,267,261,False,Vectorization not profitable
+18,owl.c_do_owl_analyze_semeai_line438,586,475,588,True,1.410
+19,owl.c_eat_lunch_escape_bonus_line4721,249,355,294,True,1.090
+20,owl.c_list_goal_worms_line5121,207,308,191,True,1.360
+21,owl.c_owl_escape_value_line4863,362,479,362,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+22,owl.c_owl_lively_line4407,317,337,357,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+23,owl.c_owl_lively_line4414,599,993,663,True,2.020
+24,owl.c_owl_update_goal_line3481,531,344,679,True,2.680
+25,persistent.c_mark_string_hotspot_values_line557,1,1,1,True,1.090
+26,persistent.c_owl_hotspots_line930,971,7162,916,True,6.280

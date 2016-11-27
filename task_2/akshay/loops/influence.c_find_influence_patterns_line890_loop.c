@@ -62,24 +62,22 @@ void loop()
             }
         }
 */
-    int cond[400];
-    for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) cond[ii]=(board[ii] != 3 && q -> safe[ii]);
 
-    for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) if(cond[ii])
+    for(ii = 21; ii <400; ii++) if(board[ii] != 3 && q -> safe[ii])
         {
             int k;
-            int temp_cond = (int)(board[ii] == 2);
             for(k = 0; k < 8; k++)
             {
                 int d = delta[k];
-                if(cond[ii + d])
+                if(board[ii + d] != 3 && !q -> safe[ii + d])
                 {
                     float reduction =(k < 4?0.25 : 0.65);
-                    if(temp_cond) q -> white_permeability[ii + d] *= reduction;
+                    if(board[ii] == 2) q -> white_permeability[ii + d] *= reduction;
                     else q -> black_permeability[ii + d] *= reduction;
                 }
             }
         }
+
 
 
 

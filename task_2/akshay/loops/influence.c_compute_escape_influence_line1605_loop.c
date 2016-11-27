@@ -15,14 +15,11 @@ void loop()
     for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) if(board[ii] != 3) escape_values[ii][cache_number] = escape_value[ii];
 */
 
-//loop reversal
-	int x = (19 + 1)*(19 + 1);
-	for(ii = 19 + 2; ii <x; ii++){ 
-		if(board[ii] == 3){
-			continue;
-		}
-		
-		escape_values[ii][cache_number] = escape_value[ii];
+
+	int x = (19 + 1) *(19 + 1);
+	for(ii = 19 + 2; ii <x; ii++){
+		int cond = (board[ii]==3);
+		escape_values[ii][cache_number] *=  cond +  (1-cond)*escape_value[ii];
 	}
 
 #pragma endscop

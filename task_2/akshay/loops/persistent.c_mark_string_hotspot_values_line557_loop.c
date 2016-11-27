@@ -17,14 +17,12 @@ void loop()
     for(i = - 1; i <= 1; i++) for(j = - 1; j <= 1; j++) if(board[19 + 2 +(m + i) *(19 + 1) +(n + j)] == 0) values[19 + 2 +(m + i) *(19 + 1) +(n + j)] += contribution;
 */
 
-//nothing possible
+//nothing possible	
 	int x,y;
-    for(i = - 1; i <= 1; i++) {
-    	x = 19 + 2 +(m + i) *(19 + 1) + n;
-    	for(j = - 1; j <= 1; j++) {
-    		values[x + j] += contribution * (int)(board[x + j] == 0); 
-    		
-    	}
+    for(i = 0; i <= 2; i++) {
+    	x = 19 + 2 +(m + i -1) *(19 + 1) + n;
+    	values[x -1] += contribution * (int)(board[x-1] == 0); 
+    	values[x] += contribution * (int)(board[x] == 0); 
     }
 
 #pragma endscop

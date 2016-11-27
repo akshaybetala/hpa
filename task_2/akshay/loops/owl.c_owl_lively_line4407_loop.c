@@ -68,15 +68,9 @@ void loop()
     
 // loop fission
 
-    int c1[10];
-    for(lunch = 0; lunch < 10; lunch++) {
-        c1[lunch] = other_owl_data -> lunch[lunch] == origin && other_owl_data -> lunch_defense_point[lunch] == 0;
-    }
+    for(lunch = 0; lunch < 10 && (other_owl_data -> lunch[lunch] != origin || other_owl_data -> lunch_defense_point[lunch] != 0); lunch++);
+    if(lunch <10) return 0;
 
-    for(lunch = 0; lunch < 10; lunch++) {
-        if(c1[lunch]) {
-            return;  
-        }
-    }
+
 #pragma endscop
 }
