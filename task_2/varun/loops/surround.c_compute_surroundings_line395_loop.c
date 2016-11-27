@@ -11,7 +11,17 @@ void loop()
 {
 #pragma scop
 
+	/*
     for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++) if(board[pos] != 3 && mn[pos] == 1) ( *surround_size)++;
+
+	*/
+    
+    for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++) {
+    	if(board[pos] != 3)
+    		if( mn[pos] == 1)
+    			( *surround_size)++;
+    } 
 
 #pragma endscop
 }
+
