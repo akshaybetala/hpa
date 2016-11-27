@@ -1,0 +1,19 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -I/home/varun/hpa/task_2/varun/loops/common -I/home/varun/hpa/task_2/varun/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o persistent.c_store_persistent_reading_cache_line461.vec -lcrypto -lssl -lm
+
+Begin optimization report for: loop()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at persistent.c_store_persistent_reading_cache_line461_loop.c(22,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between active[k+22] (24:9) and active[k+21] (24:353)
+   remark #15346: vector dependence: assumed ANTI dependence between active[k+41] (24:9) and active[k+21] (24:353)
+LOOP END
+===========================================================================

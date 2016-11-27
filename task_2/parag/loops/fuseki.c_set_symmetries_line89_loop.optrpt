@@ -1,0 +1,43 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -I/home/varun/hpa/task_2/parag/loops/common -I/home/varun/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o fuseki.c_set_symmetries_line89.vec -lcrypto -lssl -lm
+
+Begin optimization report for: loop()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at fuseki.c_set_symmetries_line89_loop.c(17,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at fuseki.c_set_symmetries_line89_loop.c(17,112)
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <board[i*20+21+board_size-1-j]>, stride is -1   [ fuseki.c_set_symmetries_line89_loop.c(19,51) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <board[(board_size-1-j)*20+21+board_size-1-i]>, stride is -20   [ fuseki.c_set_symmetries_line89_loop.c(21,51) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.189
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15452: unmasked strided loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 43 
+      remark #15477: vector cost: 9.930 
+      remark #15478: estimated potential speedup: 2.230 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at fuseki.c_set_symmetries_line89_loop.c(17,112)
+   <Remainder loop for vectorization>
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.605
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at fuseki.c_set_symmetries_line89_loop.c(17,112)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================

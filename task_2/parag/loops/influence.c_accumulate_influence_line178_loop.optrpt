@@ -1,0 +1,34 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -I/home/varun/hpa/task_2/parag/loops/common -I/home/varun/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o influence.c_accumulate_influence_line178.vec -lcrypto -lssl -lm
+
+Begin optimization report for: loop()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at influence.c_accumulate_influence_line178_loop.c(11,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at influence.c_accumulate_influence_line178_loop.c(11,5)
+   remark #15388: vectorization support: reference working[ii] has aligned access   [ influence.c_accumulate_influence_line178_loop.c(11,47) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 3.333
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 0.370 
+   remark #15478: estimated potential speedup: 4.620 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at influence.c_accumulate_influence_line178_loop.c(11,5)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
