@@ -1,0 +1,29 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -I/home/varun/hpa/task_2/parag/loops/common -I/home/varun/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o dragon.c_crude_dragon_weakness_line2057.vec -lcrypto -lssl -lm
+
+Begin optimization report for: loop()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at dragon.c_crude_dragon_weakness_line2057_loop.c(12,5)
+<Distributed chunk1>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between j (12:32) and j (12:50)
+   remark #15346: vector dependence: assumed OUTPUT dependence between j (12:50) and j (12:32)
+
+   LOOP BEGIN at dragon.c_crude_dragon_weakness_line2057_loop.c(12,28)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed ANTI dependence between weakness_value[i] (14:29) and weakness_value[i] (15:17)
+      remark #15346: vector dependence: assumed FLOW dependence between weakness_value[i] (15:17) and weakness_value[i] (14:29)
+   LOOP END
+
+   LOOP BEGIN at dragon.c_crude_dragon_weakness_line2057_loop.c(12,28)
+   LOOP END
+LOOP END
+===========================================================================

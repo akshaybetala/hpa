@@ -1,0 +1,23 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -I/home/varun/hpa/task_2/varun/loops/common -I/home/varun/hpa/task_2/varun/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o aftermath.c_aftermath_genmove_line142.vec -lcrypto -lssl -lm
+
+Begin optimization report for: loop()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at aftermath.c_aftermath_genmove_line142_loop.c(21,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (25:17) and k (25:31)
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (25:31) and k (25:17)
+
+   LOOP BEGIN at aftermath.c_aftermath_genmove_line142_loop.c(25,13)
+      remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ aftermath.c_aftermath_genmove_line142_loop.c(34,51) ]
+   LOOP END
+LOOP END
+===========================================================================
