@@ -11,7 +11,8 @@ void loop()
 {
 #pragma scop
 
-    for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++)
+	int x = (19 + 1) *(19 + 1);
+    for(pos = 19 + 2; pos <x; pos++)
     {
         if(board[pos] != 3 && replacement_map[pos] == from) replacement_map[pos] = replacement_map[from];
     }
