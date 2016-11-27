@@ -206,7 +206,7 @@ def main(folder, plutoLocation):
 	df = write_to_csv(fileMap, 'results.csv')
 	
 	print "\n\nResult:"
-	print df
+	pprint(fileMap)
 	print "\n\nInvalid files: "
 	pprint(invalidFiles)
 	# print "\n\nInstruction sets: "

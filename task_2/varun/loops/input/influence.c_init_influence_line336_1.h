@@ -1,0 +1,15 @@
+int ii_ = 0;
+unsigned char board_[(19 + 2) *(19 + 1) + 1];
+float q_white_influence_[(19 + 1) *(19 + 1)];
+float q_black_influence_[(19 + 1) *(19 + 1)];
+float q_white_attenuation_[(19 + 1) *(19 + 1)];
+float attenuation_ = 2.400000;
+float q_black_attenuation_[(19 + 1) *(19 + 1)];
+float q_white_permeability_[(19 + 1) *(19 + 1)];
+float q_black_permeability_[(19 + 1) *(19 + 1)];
+float q_white_strength_[(19 + 1) *(19 + 1)];
+float q_black_strength_[(19 + 1) *(19 + 1)];
+int q_non_territory_[(19 + 1) *(19 + 1)];
+char safe_stones_[(19 + 1) *(19 + 1)];
+float strength_[(19 + 1) *(19 + 1)];
+char q_safe_[(19 + 1) *(19 + 1)];
