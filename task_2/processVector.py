@@ -9,25 +9,25 @@ import pandas as pd
 import numpy as np
 
 def write_to_csv(d, fileName):
-	# dtype=[('fname','|S100'), ('RAR','>i4'), ('RAW','>i4'), ('TotalNumberOfDependencies','>i4'), ('WAR','>i4'), ('WAW','>i4'), \
-	# ('MeanCycle_fvec','>i4'), ('MeanCycle_novec','>i4'), ('MeanCycle_vec','>i4'), ('Vector','|S100'),('factor','|S100')]
-	# result = np.empty( (len(d),), dtype=dtype)
-	# i = 0
-	# for k, v in d.items():
-	# 	r = (k, v['Dependency']['RAR'], v['Dependency']['RAW'], v['Dependency']['TotalNumberOfDependencies'], v['Dependency']['WAR'], v['Dependency']['WAW'], \
-	# 		v['MeanCycle_fvec'], v['MeanCycle_novec'] , v['MeanCycle_vec'],v['Vector'][0],  v['Vector'][1])
-	# 	result[i] = r
-	# 	i+=1	
-
-	dtype=[('fname','|S100'), \
+	dtype=[('fname','|S100'), ('RAR','>i4'), ('RAW','>i4'), ('TotalNumberOfDependencies','>i4'), ('WAR','>i4'), ('WAW','>i4'), \
 	('MeanCycle_fvec','>i4'), ('MeanCycle_novec','>i4'), ('MeanCycle_vec','>i4'), ('Vector','|S100'),('factor','|S100')]
 	result = np.empty( (len(d),), dtype=dtype)
 	i = 0
-	for k in sorted(d):
-		v = d[k]
-		r = (k, v['MeanCycle_fvec'], v['MeanCycle_novec'] ,v['MeanCycle_vec'], v['Vector'][0],  v['Vector'][1])
+	for k, v in d.items():
+		r = (k, v['Dependency']['RAR'], v['Dependency']['RAW'], v['Dependency']['TotalNumberOfDependencies'], v['Dependency']['WAR'], v['Dependency']['WAW'], \
+			v['MeanCycle_fvec'], v['MeanCycle_novec'] , v['MeanCycle_vec'],v['Vector'][0],  v['Vector'][1])
 		result[i] = r
 		i+=1	
+
+	# dtype=[('fname','|S100'), \
+	# ('MeanCycle_fvec','>i4'), ('MeanCycle_novec','>i4'), ('MeanCycle_vec','>i4'), ('Vector','|S100'),('factor','|S100')]
+	# result = np.empty( (len(d),), dtype=dtype)
+	# i = 0
+	# for k in sorted(d):
+	# 	v = d[k]
+	# 	r = (k, v['MeanCycle_fvec'], v['MeanCycle_novec'] ,v['MeanCycle_vec'], v['Vector'][0],  v['Vector'][1])
+	# 	result[i] = r
+	# 	i+=1	
 
 
 
@@ -178,35 +178,35 @@ def main(folder, plutoLocation):
 			fileMap[name]["MeanCycle_"+fType] = meanCycle
 
 
-	# for fileName in glob.glob("*_loop.c"):
-	# 	os.chdir(folder)
-	# 	dependency = getDependency(fileName, plutoLocation, directoryPluto)
+	for fileName in glob.glob("*_loop.c"):
+		os.chdir(folder)
+		dependency = getDependency(fileName, plutoLocation, directoryPluto)
 
-	# 	name = re.search('.*line[0-9]+', fileName)
-	# 	if not name:
-	# 		continue
-	# 	name = name.group(0)
+		name = re.search('.*line[0-9]+', fileName)
+		if not name:
+			continue
+		name = name.group(0)
 
-	# 	if name not in fileMap:
-	# 		fileMap[name] = dict()
-	# 	fileMap[name]["Dependency"] = dependency
+		if name not in fileMap:
+			fileMap[name] = dict()
+		fileMap[name]["Dependency"] = dependency
 
-	# commandOutput = runCommand("cat /proc/cpuinfo")
-	# instructionSets = set()
+	commandOutput = runCommand("cat /proc/cpuinfo")
+	instructionSets = set()
 
-	# for line in commandOutput:
-	# 	if "sse" in line:
-	# 		instructionSets.add("SSE")
+	for line in commandOutput:
+		if "sse" in line:
+			instructionSets.add("SSE")
 
-	# 	if "avx" in line:
-	# 		instructionSets.add("AVX")
+		if "avx" in line:
+			instructionSets.add("AVX")
 
-	# 	if "avx2" in line:
-			# instructionSets.add("AVX2")
-	df = write_to_csv(fileMap, 'results.csv')
+		if "avx2" in line:
+			instructionSets.add("AVX2")
+	# df = write_to_csv(fileMap, 'results.csv')
 	
 	print "\n\nResult:"
-	print df
+	pprint(fileMap)
 	print "\n\nInvalid files: "
 	pprint(invalidFiles)
 	# print "\n\nInstruction sets: "
@@ -214,7 +214,7 @@ def main(folder, plutoLocation):
 
 if __name__ == '__main__':
 	# Location of extractedLoops
-	folder = "/home/akshay/Desktop/hpa/task_2/akshay/"
+	folder = "/home/akshay/Desktop/hpa/task_2/akshay/loops"
 
 	# Location of polycc executable
 	plutoLocation = "/home/akshay/Tool/pluto-0.11.4/polycc"

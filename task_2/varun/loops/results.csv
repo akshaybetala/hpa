@@ -1,4 +1,4 @@
 ,fname,MeanCycle_fvec,MeanCycle_novec,MeanCycle_vec,Vector,factor
-0,persistent.c_store_persistent_reading_cache_line461,66234,68046,75560,False,Dependence present (Any type)
-1,persistent.c_store_persistent_reading_cache_line472,66791,65347,83886,False,Dependence present (Any type)
-2,readconnect.c_find_connection_moves_line767,364,307,346,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+0,persistent.c_store_persistent_reading_cache_line461,80020,67158,95355,False,Dependence present (Any type)
+1,persistent.c_store_persistent_reading_cache_line472,68682,65608,80508,False,Dependence present (Any type)
+2,readconnect.c_find_connection_moves_line767,412,329,295,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m

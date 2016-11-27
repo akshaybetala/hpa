@@ -214,7 +214,7 @@ def main(folder, plutoLocation):
 
 if __name__ == '__main__':
 	# Location of extractedLoops
-	folder = "/home/akshay/Desktop/hpa/task_2/varun/loops"
+	folder = "/home/varun/hpa/task_2/varun/loops"
 
 	# Location of polycc executable
 	plutoLocation = "/home/akshay/Tool/pluto-0.11.4/polycc"
