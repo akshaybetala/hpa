@@ -16,18 +16,15 @@ void loop()
     }
     */
 
-    //loop fission
+    //treating two-d matrix as one-d matrix
 
-    int x = (19 + 1) *(19 + 1);
+    int x = (19 + 1) *(19 + 1)*2;
+    int * p = (int *)&safe_move_cache_when;
     for(k = 21; k < x; k++)
     {
-        safe_move_cache_when[k][0] = - 1;
+       p[k] = - 1;
     }
 
-    for(k = 21; k < x; k++)
-    {
-        safe_move_cache_when[k][1] = - 1;
-    }
 
 #pragma endscop
 }

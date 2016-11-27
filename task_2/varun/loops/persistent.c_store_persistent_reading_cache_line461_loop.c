@@ -19,7 +19,7 @@ void loop()
     */
 
     //loop normalisation and merge condition
-    for(k = 0 ; k <(19 + 1) *(19 + 1) - (19+2); k++)
+    for(k = (19 + 1) *(19 + 1) - (19+2) - 1 ; k >= 0; k--)
     {
         if( !(board[k+(19+2)] == 1 || board[k+(19+2)] == 2 || active[k+(19+2)] != 0) && (board[k + (19+2) +(19 + 1)] == 0 && active[k+ (19+2) +(19 + 1)] == 2 || board[k + (19+2) - 1] == 0 && active[k + (19+2) - 1] == 2 || board[k + (19+2) -(19 + 1)] == 0 && active[k + (19+2) -(19 + 1)] == 2 || board[k +(19+2)+ 1] == 0 && active[k+ (19+2) + 1] == 2)) active[k+(19+2)] = 3;
     }
