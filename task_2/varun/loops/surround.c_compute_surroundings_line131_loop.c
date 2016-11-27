@@ -26,10 +26,11 @@ void loop()
     */
 
     //loop invariant code outside
+    //loop interchange
     if(top_row != - 1){
-        for(m = 0; m < board_size; m++)
+        for(n = 0; n < board_size; n++)
         {
-            for(n = 0; n < board_size; n++) if(mn[19 + 2 + m *(19 + 1) + n])
+            for(m = 0; m < board_size; m++) if(mn[19 + 2 + m *(19 + 1) + n])
                 {
                     left_corner[0] = 19 + 2 + m *(19 + 1) + n;
                     top_row = m;
