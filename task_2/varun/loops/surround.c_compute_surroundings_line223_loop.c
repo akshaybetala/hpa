@@ -13,7 +13,21 @@ void loop()
 {
 #pragma scop
 
-    for(n = left_corner[left_corners - 1] %(19 + 1) - 1; n <= right_corner[right_corners - 1] %(19 + 1) - 1; n++) mn[19 + 2 + bottom_row *(19 + 1) + n] = 1;
+
+	/*
+	for(n = left_corner[left_corners - 1] %(19 + 1) - 1; n <= right_corner[right_corners - 1] %(19 + 1) - 1; n++) {
+    	mn[19 + 2 + bottom_row *(19 + 1) + n] = 1;
+    }
+	*/
+
+	//removing loop invariants
+
+	int start = left_corner[left_corners - 1] %(19 + 1) - 1;
+	int end = right_corner[right_corners - 1] %(19 + 1) - 1;
+	int offset = 19 + 2 + bottom_row *(19 + 1);
+    for(n = start; n <= end; n++) {
+    	mn[ offset + n] = 1;
+    }
 
 #pragma endscop
 }
