@@ -4,20 +4,52 @@ See "https://software.intel.com/en-us/intel-advisor-xe" for details.
 
 Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
 
-Compiler options: -I/home/varun/hpa/task_2/varun/loops/common -I/home/varun/hpa/task_2/varun/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o hash.c_hashdata_recalc_line196.vec -lcrypto -lssl -lm
+Compiler options: -I/home/parag/hpa/task_2/parag/loops/common -I/home/parag/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o hash.c_hashdata_recalc_line196.vec -lcrypto -lssl -lm
 
 Begin optimization report for: loop()
 
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at hash.c_hashdata_recalc_line196_loop.c(22,5)
-   remark #15344: loop was not vectorized: vector dependence prevents vectorization
-   remark #15346: vector dependence: assumed OUTPUT dependence between i (32:17) and i (37:53)
-   remark #15346: vector dependence: assumed OUTPUT dependence between i (37:53) and i (32:17)
+LOOP BEGIN at hash.c_hashdata_recalc_line196_loop.c(23,2)
+<Distributed chunk1>
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 1 
+   remark #15477: vector cost: 0.370 
+   remark #15478: estimated potential speedup: 2.570 
+   remark #15488: --- end vector cost summary ---
 LOOP END
 
-LOOP BEGIN at hash.c_hashdata_recalc_line196_loop.c(22,5)
-<Remainder>
+LOOP BEGIN at hash.c_hashdata_recalc_line196_loop.c(23,2)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at hash.c_hashdata_recalc_line196_loop.c(23,2)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at hash.c_hashdata_recalc_line196_loop.c(23,2)
+<Distributed chunk2>
+   remark #15389: vectorization support: reference p[pos] has unaligned access   [ hash.c_hashdata_recalc_line196_loop.c(25,20) ]
+   remark #15389: vectorization support: reference white_hash[pos][0] has unaligned access   [ hash.c_hashdata_recalc_line196_loop.c(28,46) ]
+   remark #15388: vectorization support: reference black_hash[pos][0] has aligned access   [ hash.c_hashdata_recalc_line196_loop.c(28,76) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.348
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15450: unmasked unaligned unit stride loads: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 26 
+   remark #15477: vector cost: 17.250 
+   remark #15478: estimated potential speedup: 1.490 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at hash.c_hashdata_recalc_line196_loop.c(23,2)
+<Remainder loop for vectorization, Distributed chunk2>
 LOOP END
 ===========================================================================

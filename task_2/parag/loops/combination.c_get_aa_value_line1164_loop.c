@@ -11,7 +11,9 @@ void loop()
 {
 #pragma scop
 
-    for(k = 0; k < num_stones; k++) value += aa_values[stones[k]];
-
+    // for(k = 0; k < num_stones; k++)
+    // 	value += aa_values[stones[k]];
+	for(k = num_stones - 1; k > 0; k--)
+    	value += aa_values[stones[k]];
 #pragma endscop
 }

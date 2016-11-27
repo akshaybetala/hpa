@@ -13,7 +13,18 @@ void loop()
 {
 #pragma scop
 
-    for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) if(board[ii] != 3 && goal[ii]) (queue[queue_end++] = ii , mx[ii] = 1);
+    // for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) 
+    // 	if(board[ii] != 3 && goal[ii]) 
+    // 		(queue[queue_end++] = ii , mx[ii] = 1);
+	int cond[400];
+    for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) 
+    	cond[ii] = (board[ii] != 3 && goal[ii]);
+    for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++){ 
+    	if(!cond[ii]) continue;
+    	(queue[queue_end++] = ii , mx[ii] = 1);
+    }
+
+
 
 #pragma endscop
 }

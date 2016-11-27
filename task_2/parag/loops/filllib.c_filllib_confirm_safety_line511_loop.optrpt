@@ -4,7 +4,7 @@ See "https://software.intel.com/en-us/intel-advisor-xe" for details.
 
 Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
 
-Compiler options: -I/home/varun/hpa/task_2/parag/loops/common -I/home/varun/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o filllib.c_filllib_confirm_safety_line511.vec -lcrypto -lssl -lm
+Compiler options: -I/home/parag/hpa/task_2/parag/loops/common -I/home/parag/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o filllib.c_filllib_confirm_safety_line511.vec -lcrypto -lssl -lm
 
 Begin optimization report for: loop()
 

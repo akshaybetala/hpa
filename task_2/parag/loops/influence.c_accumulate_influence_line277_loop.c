@@ -23,34 +23,68 @@ void loop()
 {
 #pragma scop
 
-    for(d = 0; d < 4; d++) if(board[ii + delta[d]] != 3) do
-            {
-                if(!safe[ii + delta[d]] &&(deltai[d] * delta_i + deltaj[d] * delta_j > 0 || queue_start == 1))
-                {
+    if(queue_start == 1){
+    for(d = 0; d < 4; d++) {
                     int contribution;
                     int permeability = permeability_array[ii];
-                    if(0)
-                    {
-                        permeability = permeability *((permeability_array[ii +(deltai[d] *(19 + 1) + 0)] < permeability_array[ii +(0 *(19 + 1) + deltaj[d])]?permeability_array[ii +(0 *(19 + 1) + deltaj[d])] : permeability_array[ii +(deltai[d] *(19 + 1) + 0)])) /(1 << 12);
-                        if(permeability == 0) continue;
-                    }
+
                     contribution = current_strength * permeability /(1 << 12);
-                    if(queue_start != 1)
-                    {
-                        int a = deltai[d] * delta_i + deltaj[d] * delta_j;
-                        contribution *= a * a;
-                        contribution = b * contribution /(1 << 12);
-                    }
                     if(contribution <=((int )(0.02 *(1 << 12))) + 0.5) continue;
-                    if(working[ii + delta[d]] == 0)
-                    {
-                        queue[queue_end] = ii + delta[d];
-                        queue_end++;
-                    }
                     working[ii + delta[d]] += contribution;
-                }
-            }
-            while(0);
+                    int cond = (int)(working[ii + delta[d]] == contribution);
+                    queue[queue_end] += (cond)*(ii + delta[d]);
+                    queue_end+= cond;
+                    
+        }
+    } else {
+        for(d = 0; d < 4; d++) 
+        if(board[ii + delta[d]] != 3 && !safe[ii + delta[d]] &&(deltai[d] * delta_i + deltaj[d] * delta_j > 0 )){
+                    int contribution;
+                    int permeability = permeability_array[ii];
+
+                    contribution = current_strength * permeability /(1 << 12);
+                    int a = deltai[d] * delta_i + deltaj[d] * delta_j;
+                    contribution *= a * a;
+                    contribution = b * contribution /(1 << 12);
+
+                    if(contribution <=((int )(0.02 *(1 << 12))) + 0.5) continue;
+                    int cond = (int)(working[ii + delta[d]] == 0);
+                    queue[queue_end] += (cond)*(ii + delta[d]);
+                    queue_end+= cond;
+                    working[ii + delta[d]] += contribution;
+        }
+    }
+        
+            
+            
+    // for(d = 0; d < 4; d++) if(board[ii + delta[d]] != 3) do
+    //         {
+    //             if(!safe[ii + delta[d]] &&(deltai[d] * delta_i + deltaj[d] * delta_j > 0 || queue_start == 1))
+    //             {
+    //                 int contribution;
+    //                 int permeability = permeability_array[ii];
+    //                 if(0)
+    //                 {
+    //                     permeability = permeability *((permeability_array[ii +(deltai[d] *(19 + 1) + 0)] < permeability_array[ii +(0 *(19 + 1) + deltaj[d])]?permeability_array[ii +(0 *(19 + 1) + deltaj[d])] : permeability_array[ii +(deltai[d] *(19 + 1) + 0)])) /(1 << 12);
+    //                     if(permeability == 0) continue;
+    //                 }
+    //                 contribution = current_strength * permeability /(1 << 12);
+    //                 if(queue_start != 1)
+    //                 {
+    //                     int a = deltai[d] * delta_i + deltaj[d] * delta_j;
+    //                     contribution *= a * a;
+    //                     contribution = b * contribution /(1 << 12);
+    //                 }
+    //                 if(contribution <=((int )(0.02 *(1 << 12))) + 0.5) continue;
+    //                 if(working[ii + delta[d]] == 0)
+    //                 {
+    //                     queue[queue_end] = ii + delta[d];
+    //                     queue_end++;
+    //                 }
+    //                 working[ii + delta[d]] += contribution;
+    //             }
+    //         }
+    //         while(0);
 
 #pragma endscop
 }
