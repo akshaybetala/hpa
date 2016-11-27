@@ -12,6 +12,7 @@ void loop()
 {
 #pragma scop
 
+    /*
     for(m = 0; m < board_size; m++)
     {
         if(top_row != - 1) break;
@@ -21,6 +22,20 @@ void loop()
                 top_row = m;
                 break;
             }
+    }
+    */
+
+    //loop invariant code outside
+    if(top_row != - 1){
+        for(m = 0; m < board_size; m++)
+        {
+            for(n = 0; n < board_size; n++) if(mn[19 + 2 + m *(19 + 1) + n])
+                {
+                    left_corner[0] = 19 + 2 + m *(19 + 1) + n;
+                    top_row = m;
+                    break;
+                }
+        }
     }
 
 #pragma endscop
