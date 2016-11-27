@@ -46,11 +46,25 @@ void loop()
 {
 #pragma scop
 
+
+/*
+
     for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++)
     {
         int_white_permeabilities[ii] =(((int )(q -> white_permeability[ii] *(1 << 12))) + 0.5);
         int_black_permeabilities[ii] =(((int )(q -> black_permeability[ii] *(1 << 12))) + 0.5);
     }
+*/
+
+    int x = (19 + 1) *(19 + 1);
+    int y = (1 << 12);
+
+    for(ii = 19 + 2; ii <x; ii++)
+    {
+        int_white_permeabilities[ii] =(((int )(q -> white_permeability[ii] *y)) + 0.5);
+        int_black_permeabilities[ii] =(((int )(q -> black_permeability[ii] *y)) + 0.5);
+    }
+
 
 #pragma endscop
 }

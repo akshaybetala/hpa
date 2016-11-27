@@ -12,7 +12,13 @@ void loop()
 {
 #pragma scop
 
-    for(k = 0; k < next_connection; k++) if(conn_worm1[k] == worm1 && conn_worm2[k] == worm2) return k;
+    // for(k = 0; k < next_connection; k++) if(conn_worm1[k] == worm1 && conn_worm2[k] == worm2) return k;
+
+	int cond[next_connection];
+    for(k = 0; k < next_connection; k++) cond[k] = (conn_worm1[k] == worm1 && conn_worm2[k] == worm2);
+	for(k = 0; k < next_connection; k++) if(cond[k]) return k;
+
+
 
 #pragma endscop
 }
