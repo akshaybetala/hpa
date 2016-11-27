@@ -68,5 +68,17 @@ void loop()
 
     for(k = 0; k < 8; k++) if(board[pos + delta[k]] != 3 && current_owl_data -> goal[pos + delta[k]]) return - 10;
 
+
+    // bool cc = false;
+    // for(k = 0; k < 8; k++) {
+    //     if(board[pos + delta[k]] != 3 && current_owl_data -> goal[pos + delta[k]]) {
+    //         cc = true;
+    //     }
+    // }
+
+    // if(cc==true) {
+    //     return - 10;
+    // }
+
 #pragma endscop
 }

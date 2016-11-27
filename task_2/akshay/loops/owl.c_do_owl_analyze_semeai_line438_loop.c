@@ -62,7 +62,7 @@ extern struct local_owl_data* restrict owlb;
 void loop()
 {
 #pragma scop
-
+/*
     for(k = 0; k < 10; k++)
     {
         if(owla -> lunch[k] != 0 && owlb -> goal[owla -> lunch[k]])
@@ -70,6 +70,15 @@ void loop()
             owla -> lunch[k] = 0;
         }
     }
+
+*/
+    int temp;
+    for(k = 0; k < 10; k++)
+    {
+        temp = owla -> lunch[k];
+        owla -> lunch[k] *= 1-(int)(owlb -> goal[temp]);
+    }
+
 
 #pragma endscop
 }

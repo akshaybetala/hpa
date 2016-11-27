@@ -64,12 +64,22 @@ extern int do_add;
 void loop()
 {
 #pragma scop
-
+/*
     for(k = 0; k < num_stones; k++) if(owl -> goal[stones[k]] != 0)
         {
             do_add = 1;
             break;
         }
+*/
+    int temp[num_stones];
+    for(k = 0; k < num_stones; k++) temp[k] = (owl -> goal[stones[k]] != 0);
+        
+    for(k = 0; k < num_stones; k++) if(temp[k])
+        {
+            do_add = 1;
+            break;
+        }
+
 
 #pragma endscop
 }

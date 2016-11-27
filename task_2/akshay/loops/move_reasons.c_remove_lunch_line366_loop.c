@@ -12,7 +12,11 @@ void loop()
 {
 #pragma scop
 
-    for(k = 0; k < next_lunch; k++) if(lunch_dragon[k] == dragon1 && lunch_worm[k] == worm1) break;
+    //for(k = 0; k < next_lunch; k++) if(lunch_dragon[k] == dragon1 && lunch_worm[k] == worm1) break;
+
+    int cond[next_lunch];
+    for(k = 0; k < next_lunch; k++) cond[k] = (lunch_dragon[k] == dragon1 && lunch_worm[k] == worm1);
+	for(k = 0; k < next_lunch; k++) if(cond[k]) break;
 
 #pragma endscop
 }

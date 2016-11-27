@@ -12,7 +12,13 @@ void loop()
 {
 #pragma scop
 
-    for(k = 0; k < 4; k++) if(board[pos + delta[k]] != 3) neighbors |= board[pos + delta[k]];
+//    for(k = 0; k < 4; k++) if(board[pos + delta[k]] != 3) neighbors |= board[pos + delta[k]];
+
+    for(k = 0; k < 4; k++) {
+    	if(board[pos + delta[k]] != 3) {
+    		neighbors |= board[pos + delta[k]];
+    	}
+    }
 
 #pragma endscop
 }

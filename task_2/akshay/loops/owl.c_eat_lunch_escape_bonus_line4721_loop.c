@@ -64,8 +64,16 @@ extern int  adjacent[160] ;
 void loop()
 {
 #pragma scop
-
+/*
     for(n = 0; n < neighbors; n++) adjoins |= !owl -> goal[adjacent[n]];
+*/
+
+    int temp = 0;
+    for(n = 0; n < neighbors; n++){
+        temp |= owl -> goal[adjacent[n]];
+    }
+
+    adjoins |= !temp;
 
 #pragma endscop
 }
