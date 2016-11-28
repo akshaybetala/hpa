@@ -16,7 +16,7 @@ void loop()
     //loop invariant code outside
 
     int t = distances[0] + 1500;
-	for(r = 0; r < num_moves; r++) if(distances[r] > t) break;
+	for(r = 0; r < num_moves && distances[r] <= t; r++) {}
 
 #pragma endscop
 }
