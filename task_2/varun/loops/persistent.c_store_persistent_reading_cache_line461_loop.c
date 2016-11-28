@@ -18,10 +18,11 @@ void loop()
     }
     */
 
-    //loop normalisation and merge condition
+    // reversal and merge condition
     for(k = (19 + 1) *(19 + 1) - (19+2) - 1 ; k >= 0; k--)
     {
-        if( !(board[k+(19+2)] == 1 || board[k+(19+2)] == 2 || active[k+(19+2)] != 0) && (board[k + (19+2) +(19 + 1)] == 0 && active[k+ (19+2) +(19 + 1)] == 2 || board[k + (19+2) - 1] == 0 && active[k + (19+2) - 1] == 2 || board[k + (19+2) -(19 + 1)] == 0 && active[k + (19+2) -(19 + 1)] == 2 || board[k +(19+2)+ 1] == 0 && active[k+ (19+2) + 1] == 2)) active[k+(19+2)] = 3;
+        int cond = (int) (( !(board[k+21] == 1 || board[k+21] == 2 || active[k+21] != 0) && (board[k + 41] == 0 && active[k+ 41] == 2 || board[k + 20] == 0 && active[k + 20] == 2 || board[k + 1] == 0 && active[k + 1] == 2 || board[k + 22] == 0 && active[k+ 22] == 2)));
+        active[k+21] = 3 * cond + active[k+21] * (1 - cond);
     }
 
 #pragma endscop

@@ -1,4 +1,16 @@
 ,fname,MeanCycle_fvec,MeanCycle_novec,MeanCycle_vec,Vector,factor
-0,persistent.c_store_persistent_reading_cache_line461,80020,67158,95355,False,Dependence present (Any type)
-1,persistent.c_store_persistent_reading_cache_line472,68682,65608,80508,False,Dependence present (Any type)
-2,readconnect.c_find_connection_moves_line767,412,329,295,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+0,persistent.c_store_persistent_reading_cache_line461,83310,91509,87920,True,2.570
+1,persistent.c_store_persistent_reading_cache_line472,27022,38425,26932,True,2.570
+2,readconnect.c_find_connection_moves_line767,747,663,755,True,2.580
+3,reading.c_clear_safe_move_cache_line4519,1688,13129,1725,True,7.060
+4,reading.c_simple_ladder_attack_line4728,838,308,480,False,Inner loop was already vectorized
+5,score.c_close_bubbles_line173,49702,48050,45880,False,Dependence present (Any type)
+6,surround.c_compute_surroundings_line131,143,111,219,False,Inner loop was already vectorized
+7,surround.c_compute_surroundings_line144,230,103,151,False,Inner loop was already vectorized
+8,surround.c_compute_surroundings_line179,1629,1755,1687,True,2.610
+9,surround.c_compute_surroundings_line223,332,290,334,True,2.210
+10,surround.c_compute_surroundings_line267,103812,98722,99987,False,Dependence present (Any type)
+11,surround.c_compute_surroundings_line298,28885,54000,30226,False,Inner loop was already vectorized
+12,surround.c_compute_surroundings_line313,31374,45509,35238,True,2.570
+13,surround.c_compute_surroundings_line395,5433,20494,5470,True,2.940
+14,utils.c_superstring_add_string_line1785,1,1,1,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m

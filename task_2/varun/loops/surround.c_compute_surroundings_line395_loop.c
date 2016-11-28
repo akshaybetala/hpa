@@ -15,12 +15,12 @@ void loop()
     for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++) if(board[pos] != 3 && mn[pos] == 1) ( *surround_size)++;
 
 	*/
-    
-    for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++) {
-    	if(board[pos] != 3)
-    		if( mn[pos] == 1)
-    			( *surround_size)++;
-    } 
+
+    //merging condition with computation
+
+for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++) {
+	*surround_size += (int) (board[pos] != 3 && mn[pos] == 1);
+}
 
 #pragma endscop
 }
