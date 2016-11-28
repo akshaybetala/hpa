@@ -34,7 +34,7 @@ void loop()
     
     for(ii = 19 + 2; ii <x; ii++)
     {
-            board_was_cached = 0;
+        cached_board[ii] = board[ii];
     }
 
     

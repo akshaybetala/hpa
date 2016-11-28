@@ -1,28 +1,28 @@
-,fname,MeanCycle_fvec,MeanCycle_novec,MeanCycle_vec,Vector,factor
-0,influence.c_compute_escape_influence_line1557,109,1,109,True,6.960
-1,influence.c_compute_escape_influence_line1565,96,138,96,False,Vectorization not profitable
-2,influence.c_compute_escape_influence_line1569,12915,26242,23113,True,4.420
-3,influence.c_compute_escape_influence_line1605,20190,1,20509,True,3.240
-4,influence.c_compute_followup_influence_line1511,5364,16312,5473,True,5.940
-5,influence.c_do_compute_influence_line941,14111,54575,13863,True,5.730
-6,influence.c_find_influence_patterns_line890,38738,38417,39040,False,Dependence present (Any type)
-7,influence.c_store_delta_territory_cache_line1644,1135,6465,1094,True,6.280
-8,influence.c_value_territory_line1198,168721,255105,169132,True,4.500
-9,matchpat.c_dfa_prepare_for_match_line512,17665,131744,15442,True,5.260
-10,matchpat.c_dfa_prepare_for_match_line517,974,878,747,False,Vectorization not profitable
-11,move_reasons.c_add_lunch_line341,307,207,320,True,4.310
-12,move_reasons.c_add_replacement_move_line1391,1,16460,1,True,4.480
-13,move_reasons.c_find_connection_line145,278,171,278,True,4.340
-14,move_reasons.c_find_eye_line244,298,186,305,True,3.990
-15,move_reasons.c_remove_lunch_line366,284,293,284,True,4.310
-16,optics.c_false_margin_line519,431,217,215,False,Vectorization not profitable
-17,optics.c_false_margin_line528,436,267,261,False,Vectorization not profitable
-18,owl.c_do_owl_analyze_semeai_line438,586,475,588,True,1.410
-19,owl.c_eat_lunch_escape_bonus_line4721,249,355,294,True,1.090
-20,owl.c_list_goal_worms_line5121,207,308,191,True,1.360
-21,owl.c_owl_escape_value_line4863,362,479,362,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-22,owl.c_owl_lively_line4407,317,337,357,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-23,owl.c_owl_lively_line4414,599,993,663,True,2.020
-24,owl.c_owl_update_goal_line3481,531,344,679,True,2.680
-25,persistent.c_mark_string_hotspot_values_line557,1,1,1,True,1.090
-26,persistent.c_owl_hotspots_line930,971,7162,916,True,6.280
+,fname,MeanCycle_fvec,MeanCycle_novec,Vector
+0,influence.c_compute_escape_influence_line1557,4087,1,True
+1,influence.c_compute_escape_influence_line1565,92,113,False
+2,influence.c_compute_escape_influence_line1569,14239,24359,True
+3,influence.c_compute_escape_influence_line1605,23149,1,True
+4,influence.c_compute_followup_influence_line1511,5471,18609,True
+5,influence.c_do_compute_influence_line941,21009,55796,True
+6,influence.c_find_influence_patterns_line890,40660,42028,False
+7,influence.c_store_delta_territory_cache_line1644,1104,7892,True
+8,influence.c_value_territory_line1198,148998,158121,False
+9,matchpat.c_dfa_prepare_for_match_line512,16309,124243,True
+10,matchpat.c_dfa_prepare_for_match_line517,1626,1078,False
+11,move_reasons.c_add_lunch_line341,577,171,True
+12,move_reasons.c_add_replacement_move_line1391,1,19654,True
+13,move_reasons.c_find_connection_line145,286,211,True
+14,move_reasons.c_find_eye_line244,311,168,True
+15,move_reasons.c_remove_lunch_line366,278,181,True
+16,optics.c_false_margin_line519,522,205,False
+17,optics.c_false_margin_line528,436,274,False
+18,owl.c_do_owl_analyze_semeai_line438,629,580,True
+19,owl.c_eat_lunch_escape_bonus_line4721,283,213,True
+20,owl.c_list_goal_worms_line5121,266,302,True
+21,owl.c_owl_escape_value_line4863,365,416,False
+22,owl.c_owl_lively_line4407,585,307,False
+23,owl.c_owl_lively_line4414,590,671,True
+24,owl.c_owl_update_goal_line3481,760,409,True
+25,persistent.c_mark_string_hotspot_values_line557,1,1,True
+26,persistent.c_owl_hotspots_line930,1029,6563,True

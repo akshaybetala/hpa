@@ -84,30 +84,29 @@ void loop()
     for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++){
         if(cond[ii])
         {
-            for(k = 0; k < 4; k++)
+            if(q -> territory_value[ii] > 0.0)
             {
-                if(!(board[ii + delta[k]] != 3)) continue;
-                if(q -> territory_value[ii] > 0.0)
+                for(k = 0; k < 4; k++)
                 {
-                    if(!q -> safe[ii + delta[k]])
-                    {
-                        float neighbor_val =((q -> black_permeability[ii + delta[k]] * first_guess[ii + delta[k]]) +(1.0 - q -> black_permeability[ii + delta[k]]) * first_guess[ii]);
-                        q -> territory_value[ii] =(0 <((q -> territory_value[ii] < neighbor_val?q -> territory_value[ii] : neighbor_val))?((q -> territory_value[ii] < neighbor_val?q -> territory_value[ii] : neighbor_val)) : 0);
-                    }
-                }
-                else
-                {
-                    if(!q -> safe[ii + delta[k]])
-                    {
-                        float neighbor_val = q -> white_permeability[ii + delta[k]] * first_guess[ii + delta[k]] +(1 - q -> white_permeability[ii + delta[k]]) * first_guess[ii];
-                        q -> territory_value[ii] =(0 <((q -> territory_value[ii] < neighbor_val?neighbor_val : q -> territory_value[ii]))?0 :((q -> territory_value[ii] < neighbor_val?neighbor_val : q -> territory_value[ii])));
-                    }
+                    if(board[ii + delta[k]] == 3 || q -> safe[ii + delta[k]] ) continue;
+                    float neighbor_val =((q -> black_permeability[ii + delta[k]] * first_guess[ii + delta[k]]) +(1.0 - q -> black_permeability[ii + delta[k]]) * first_guess[ii]);
+                    q -> territory_value[ii] =(0 <((q -> territory_value[ii] < neighbor_val?q -> territory_value[ii] : neighbor_val))?((q -> territory_value[ii] < neighbor_val?q -> territory_value[ii] : neighbor_val)) : 0);
+                    
                 }
             }
+            else
+            {
+                for(k = 0; k < 4; k++)
+                {
+                    if(board[ii + delta[k]] == 3 || q -> safe[ii + delta[k]]) continue;
+                    float neighbor_val = q -> white_permeability[ii + delta[k]] * first_guess[ii + delta[k]] +(1 - q -> white_permeability[ii + delta[k]]) * first_guess[ii];
+                    q -> territory_value[ii] =(0 <((q -> territory_value[ii] < neighbor_val?neighbor_val : q -> territory_value[ii]))?0 :((q -> territory_value[ii] < neighbor_val?neighbor_val : q -> territory_value[ii])));
+                    
+                    
+                }
+            }            
         }
     }
-
-
 
 #pragma endscop
 }

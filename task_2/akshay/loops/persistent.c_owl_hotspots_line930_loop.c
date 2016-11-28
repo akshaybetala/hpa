@@ -9,8 +9,7 @@ void loop()
 #pragma scop
 
 //    for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++) values[pos] = 0.0;
-	int x = 400;
-	for(pos = 19 + 2; pos <x; pos++) values[pos] = 0.0;
+	for(pos = (19 + 1) *(19 + 1)-1; pos > 20; pos--) values[pos] = 0.0;
 
 #pragma endscop
 }
