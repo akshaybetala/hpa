@@ -28,9 +28,13 @@ void loop()
     {
         if(cached_board[ii] != board[ii])
         {
-            cached_board[ii] = board[ii];
             board_was_cached = 0;
         }
+    }
+    
+    for(ii = 19 + 2; ii <x; ii++)
+    {
+            board_was_cached = 0;
     }
 
     

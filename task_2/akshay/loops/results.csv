@@ -1,28 +1,28 @@
 ,fname,MeanCycle_fvec,MeanCycle_novec,MeanCycle_vec,Vector,factor
-0,influence.c_compute_escape_influence_line1557,3044,1,3193,True,5.130
-1,influence.c_compute_escape_influence_line1565,96,97,96,False,Vectorization not profitable
-2,influence.c_compute_escape_influence_line1569,25002,15861,16570,False,Vectorization not profitable
-3,influence.c_compute_escape_influence_line1605,10652,1,15776,False,Vectorization not profitable
-4,influence.c_compute_followup_influence_line1511,5687,35988,5655,True,3.770
-5,influence.c_do_compute_influence_line941,13817,52627,13780,True,5.730
-6,influence.c_find_influence_patterns_line890,35825,38697,36046,False,Dependence present (Any type)
-7,influence.c_store_delta_territory_cache_line1644,1121,8894,1344,True,6.280
-8,influence.c_value_territory_line1198,166090,168986,173838,False,Dependence present (Any type)
-9,matchpat.c_dfa_prepare_for_match_line512,19687,116612,14634,True,5.260
-10,matchpat.c_dfa_prepare_for_match_line517,13942,12678,14088,False,Inner loop was already vectorized
-11,move_reasons.c_add_lunch_line341,129,136,184,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-12,move_reasons.c_add_replacement_move_line1391,20280,20740,22208,False,Dependence present (Any type)
-13,move_reasons.c_find_connection_line145,98,109,116,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-14,move_reasons.c_find_eye_line244,125,107,227,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-15,move_reasons.c_remove_lunch_line366,232,143,138,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-16,optics.c_false_margin_line519,419,204,222,False,Vectorization not profitable
-17,optics.c_false_margin_line528,343,226,223,False,Vectorization not profitable
-18,owl.c_do_owl_analyze_semeai_line438,743,311,499,False,   remark #15553: loop was not vectorized: number of iterations (10) is insufficient for vectorizati
-19,owl.c_eat_lunch_escape_bonus_line4721,262,210,252,False,Vectorization not profitable
-20,owl.c_list_goal_worms_line5121,191,309,226,True,1.360
-21,owl.c_owl_escape_value_line4863,585,576,531,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-22,owl.c_owl_lively_line4407,495,501,494,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-23,owl.c_owl_lively_line4414,459,493,469,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-24,owl.c_owl_update_goal_line3481,201,229,216,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-25,persistent.c_mark_string_hotspot_values_line557,1,1,1,False,Dependence present (Any type)
-26,persistent.c_owl_hotspots_line930,918,6354,953,True,6.280
+0,influence.c_compute_escape_influence_line1557,109,1,109,True,6.960
+1,influence.c_compute_escape_influence_line1565,96,138,96,False,Vectorization not profitable
+2,influence.c_compute_escape_influence_line1569,12915,26242,23113,True,4.420
+3,influence.c_compute_escape_influence_line1605,20190,1,20509,True,3.240
+4,influence.c_compute_followup_influence_line1511,5364,16312,5473,True,5.940
+5,influence.c_do_compute_influence_line941,14111,54575,13863,True,5.730
+6,influence.c_find_influence_patterns_line890,38738,38417,39040,False,Dependence present (Any type)
+7,influence.c_store_delta_territory_cache_line1644,1135,6465,1094,True,6.280
+8,influence.c_value_territory_line1198,168721,255105,169132,True,4.500
+9,matchpat.c_dfa_prepare_for_match_line512,17665,131744,15442,True,5.260
+10,matchpat.c_dfa_prepare_for_match_line517,974,878,747,False,Vectorization not profitable
+11,move_reasons.c_add_lunch_line341,307,207,320,True,4.310
+12,move_reasons.c_add_replacement_move_line1391,1,16460,1,True,4.480
+13,move_reasons.c_find_connection_line145,278,171,278,True,4.340
+14,move_reasons.c_find_eye_line244,298,186,305,True,3.990
+15,move_reasons.c_remove_lunch_line366,284,293,284,True,4.310
+16,optics.c_false_margin_line519,431,217,215,False,Vectorization not profitable
+17,optics.c_false_margin_line528,436,267,261,False,Vectorization not profitable
+18,owl.c_do_owl_analyze_semeai_line438,586,475,588,True,1.410
+19,owl.c_eat_lunch_escape_bonus_line4721,249,355,294,True,1.090
+20,owl.c_list_goal_worms_line5121,207,308,191,True,1.360
+21,owl.c_owl_escape_value_line4863,362,479,362,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+22,owl.c_owl_lively_line4407,317,337,357,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+23,owl.c_owl_lively_line4414,599,993,663,True,2.020
+24,owl.c_owl_update_goal_line3481,531,344,679,True,2.680
+25,persistent.c_mark_string_hotspot_values_line557,1,1,1,True,1.090
+26,persistent.c_owl_hotspots_line930,971,7162,916,True,6.280

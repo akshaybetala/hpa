@@ -14,7 +14,19 @@ void loop()
 {
 #pragma scop
 
-    for(x = i1; x <= i2; x++) for(y = j1; y <= j2; y++) if(board[19 + 2 + x *(19 + 1) + y] != 0) return 0;
+	int temp;
+    for(x = i1; x <= i2; x++){
+    	temp = 19 + 2 + x *(19 + 1);
+    	for(y = j1; y <= j2; y++)
+    		if(board[temp+y] == 0)
+    			continue;
+    		else 
+    			return 0;
+    }
 
+   // for(x = i1; x <= i2; x++)
+   //  	for(y = j1; y <= j2; y++)
+   //  		if(board[19 + 2 + x *(19 + 1) + y] != 0)
+   //  			return 0;
 #pragma endscop
 }

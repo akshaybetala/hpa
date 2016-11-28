@@ -206,7 +206,7 @@ def main(folder, plutoLocation):
 	df = write_to_csv(fileMap, 'results.csv')
 	
 	print "\n\nResult:"
-	print df
+	pprint(fileMap)
 	print "\n\nInvalid files: "
 	pprint(invalidFiles)
 	# print "\n\nInstruction sets: "
@@ -214,7 +214,7 @@ def main(folder, plutoLocation):
 
 if __name__ == '__main__':
 	# Location of extractedLoops
-	folder = "/home/akshay/Desktop/hpa/task_2/akshay/loops"
+	folder = "/home/akshay/hpa/task_2/akshay/loops"
 
 	# Location of polycc executable
 	plutoLocation = "/home/akshay/Tool/pluto-0.11.4/polycc"

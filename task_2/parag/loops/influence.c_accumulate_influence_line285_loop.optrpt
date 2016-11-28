@@ -4,16 +4,24 @@ See "https://software.intel.com/en-us/intel-advisor-xe" for details.
 
 Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
 
-Compiler options: -I/home/varun/hpa/task_2/parag/loops/common -I/home/varun/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o influence.c_accumulate_influence_line285.vec -lcrypto -lssl -lm
+Compiler options: -I/home/parag/hpa/task_2/parag/loops/common -I/home/parag/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o influence.c_accumulate_influence_line285.vec -lcrypto -lssl -lm
 
 Begin optimization report for: loop()
 
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at influence.c_accumulate_influence_line285_loop.c(26,5)
+LOOP BEGIN at influence.c_accumulate_influence_line285_loop.c(27,5)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization
-   remark #15346: vector dependence: assumed ANTI dependence between working[ii+delta[d]] (45:21) and working[ii+delta[d]] (50:21)
-   remark #15346: vector dependence: assumed FLOW dependence between working[ii+delta[d]] (50:21) and working[ii+delta[d]] (45:21)
+   remark #15346: vector dependence: assumed FLOW dependence between count (32:17) and count (31:17)
+   remark #15346: vector dependence: assumed ANTI dependence between count (31:17) and count (32:17)
+   remark #15346: vector dependence: assumed ANTI dependence between count (31:17) and count (32:17)
+   remark #15346: vector dependence: assumed FLOW dependence between count (32:17) and count (31:17)
+LOOP END
+
+LOOP BEGIN at influence.c_accumulate_influence_line285_loop.c(35,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between working[index] (54:9) and working[index] (59:9)
+   remark #15346: vector dependence: assumed FLOW dependence between working[index] (59:9) and working[index] (54:9)
 LOOP END
 ===========================================================================

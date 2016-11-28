@@ -63,13 +63,21 @@ void loop()
     int x = (19 + 1) *(19 + 1);
     int y = (1 << 12);
 
-    for(ii = 19 + 2; ii <x; ii++) if(board[ii] != 3)
+    if(color == 1){
+        for(ii = 19 + 2; ii <x; ii++) if(board[ii] != 3)
         {
-            if(color == 1) q -> white_influence[ii] +=((float )int_influence[ii]) /y;
-            else q -> black_influence[ii] +=((float )int_influence[ii]) /y;
+            q -> white_influence[ii] +=((float )int_influence[ii]) /y;
+        }
+    
+    }
+    else{
+        for(ii = 19 + 2; ii <x; ii++) if(board[ii] != 3)
+        {
+            q -> black_influence[ii] +=((float )int_influence[ii]) /y;
         }
 
-
+    }
+    
 
 #pragma endscop
 }

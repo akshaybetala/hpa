@@ -14,7 +14,15 @@ void loop()
 {
 #pragma scop
 
-    for(k = 0; k < 4; k++) if(board[pos + delta[k]] == other && !lively[pos + delta[k]]) all_lively = 0;
+//    for(k = 0; k < 4; k++) if(board[pos + delta[k]] == other && !lively[pos + delta[k]]) all_lively = 0;
+	int x = 0;
+	int c = 0 ;
+	for(k = 0; k < 4; k++){ 
+		x = pos + delta[k];
+		c += (board[x] == other && !lively[x]);
+	}
+	if(c > 0)
+		all_lively = 0;
 
 #pragma endscop
 }

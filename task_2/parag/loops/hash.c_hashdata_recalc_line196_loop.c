@@ -18,27 +18,37 @@ extern Hashvalue  black_hash[(19 + 1) *(19 + 1)][64 /(8 * sizeof(long ))] ;
 void loop()
 {
 #pragma scop
-
-    for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++)
-    {
-        if(!(board[pos] != 3)) continue;
-        switch(p[pos])
-        {
-        default:
-            {} case 0:
-            break;
-        case 1:
-        {
-            for(i = 0; i < 64 /(8 * sizeof(long )); i++) target -> hashval[i] ^= white_hash[pos][i];
-            break;
-        }
-        case 2:
-        {
-            for(i = 0; i < 64 /(8 * sizeof(long )); i++) target -> hashval[i] ^= black_hash[pos][i];
-            break;
-        }
-        }
+//VECTORIZED
+    int x = 64 /(8 * sizeof(long ));
+ for(pos = 21; pos <400; pos++)
+    {   
+        int temp = p[pos];
+        if(board[pos] == 3 && temp!=1 && temp!=2) continue;
+        for(i = 0; i < x; i++) 
+            target -> hashval[i] ^= (2-temp)*white_hash[pos][i] + (temp-1)*black_hash[pos][i];
     }
+
+    // for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++)
+    // {
+    //     if(!(board[pos] != 3)) continue;
+    //     switch(p[pos])
+    //     {
+    //     default:
+    //         {}
+    //     case 0:
+    //         break;
+    //     case 1:
+    //     {
+    //         for(i = 0; i < 64 /(8 * sizeof(long )); i++) target -> hashval[i] ^= white_hash[pos][i];
+    //         break;
+    //     }
+    //     case 2:
+    //     {
+    //         for(i = 0; i < 64 /(8 * sizeof(long )); i++) target -> hashval[i] ^= black_hash[pos][i];
+    //         break;
+    //     }
+    //     }
+    // }
 
 #pragma endscop
 }

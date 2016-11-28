@@ -62,8 +62,15 @@ extern int origin;
 void loop()
 {
 #pragma scop
-
+/*
     for(lunch = 0; lunch < 10; lunch++) if(other_owl_data -> lunch[lunch] == origin && other_owl_data -> lunch_defense_point[lunch] == 0) return 0;
+*/
+    
+// loop fission
+
+    for(lunch = 0; lunch < 10 && (other_owl_data -> lunch[lunch] != origin || other_owl_data -> lunch_defense_point[lunch] != 0); lunch++);
+    if(lunch <10) return 0;
+
 
 #pragma endscop
 }

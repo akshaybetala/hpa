@@ -11,12 +11,25 @@ extern int  next_stone[(19 + 1) *(19 + 1)] ;
 void loop()
 {
 #pragma scop
-
-    for(k = 0; k < maxstones && k < size; k++)
-    {
-        stones[k] = pos;
-        pos = next_stone[pos];
+	// int n;
+	// if(maxstones < size)
+	// 	n = maxstones;
+	// else
+	// 	n = size;
+	stones[0] = pos;
+	for(k = 1; k < maxstones && k < size; k++)
+	{	
+		stones[k] = next_stone[stones[k-1]];
+        // stones[k] = pos;
+        // pos = next_stone[pos];
     }
+		
+    //for(k = 0; k < maxstones && k < size; k++)
+	// {
+ //        stones[k] = pos;
+ //        pos = next_stone[pos];
+ //    }
+	
 
 #pragma endscop
 }

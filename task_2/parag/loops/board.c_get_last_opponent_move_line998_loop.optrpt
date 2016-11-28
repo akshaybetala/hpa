@@ -4,14 +4,40 @@ See "https://software.intel.com/en-us/intel-advisor-xe" for details.
 
 Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
 
-Compiler options: -I/home/varun/hpa/task_2/parag/loops/common -I/home/varun/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o board.c_get_last_opponent_move_line998.vec -lcrypto -lssl -lm
+Compiler options: -I/home/parag/hpa/task_2/parag/loops/common -I/home/parag/hpa/task_2/parag/loops/input -O3 -g -std=c99 -xHost -vec-threshold100 -vec -qopt-report-phase=vec -qopt-report=5 -o board.c_get_last_opponent_move_line998.vec -lcrypto -lssl -lm
 
 Begin optimization report for: loop()
 
     Report from: Vector optimizations [vec]
 
 
-LOOP BEGIN at board.c_get_last_opponent_move_line998_loop.c(14,5)
-   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ board.c_get_last_opponent_move_line998_loop.c(14,95) ]
+LOOP BEGIN at board.c_get_last_opponent_move_line998_loop.c(16,5)
+   remark #15415: vectorization support: non-unit strided load was generated for the variable <move_history_color[k]>, stride is -1   [ board.c_get_last_opponent_move_line998_loop.c(16,63) ]
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <temp[k]>, stride is -1   [ board.c_get_last_opponent_move_line998_loop.c(16,52) ]
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.022
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15452: unmasked strided loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 12 
+   remark #15477: vector cost: 5.560 
+   remark #15478: estimated potential speedup: 2.130 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at board.c_get_last_opponent_move_line998_loop.c(16,5)
+<Remainder loop for vectorization>
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.423
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at board.c_get_last_opponent_move_line998_loop.c(16,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at board.c_get_last_opponent_move_line998_loop.c(17,5)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ board.c_get_last_opponent_move_line998_loop.c(18,19) ]
 LOOP END
 ===========================================================================

@@ -48,7 +48,7 @@ extern float  first_guess[20 * 20] ;
 void loop()
 {
 #pragma scop
-
+/*
     for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) if(board[ii] != 3)
         {
             if(!q -> safe[ii])
@@ -75,6 +75,39 @@ void loop()
                 }
             }
         }
+
+*/
+    int cond[400];
+
+    for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) cond[ii] = (!q -> safe[ii] && board[ii] != 3);
+            
+    for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++){
+        if(cond[ii])
+        {
+            for(k = 0; k < 4; k++)
+            {
+                if(!(board[ii + delta[k]] != 3)) continue;
+                if(q -> territory_value[ii] > 0.0)
+                {
+                    if(!q -> safe[ii + delta[k]])
+                    {
+                        float neighbor_val =((q -> black_permeability[ii + delta[k]] * first_guess[ii + delta[k]]) +(1.0 - q -> black_permeability[ii + delta[k]]) * first_guess[ii]);
+                        q -> territory_value[ii] =(0 <((q -> territory_value[ii] < neighbor_val?q -> territory_value[ii] : neighbor_val))?((q -> territory_value[ii] < neighbor_val?q -> territory_value[ii] : neighbor_val)) : 0);
+                    }
+                }
+                else
+                {
+                    if(!q -> safe[ii + delta[k]])
+                    {
+                        float neighbor_val = q -> white_permeability[ii + delta[k]] * first_guess[ii + delta[k]] +(1 - q -> white_permeability[ii + delta[k]]) * first_guess[ii];
+                        q -> territory_value[ii] =(0 <((q -> territory_value[ii] < neighbor_val?neighbor_val : q -> territory_value[ii]))?0 :((q -> territory_value[ii] < neighbor_val?neighbor_val : q -> territory_value[ii])));
+                    }
+                }
+            }
+        }
+    }
+
+
 
 #pragma endscop
 }

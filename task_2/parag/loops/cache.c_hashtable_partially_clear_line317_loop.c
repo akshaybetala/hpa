@@ -9,7 +9,12 @@ void loop()
 {
 #pragma scop
 
-    for(k = 0; k < 6 + 1; ++k) for(l = 0; l < 20; ++l) statistics[k][l] = 0;
+	int * s = (int *)(& statistics);
+    for(k = 0; k < 140; ++k) 
+			s[k] = 0;
+    // for(k = 0; k < 6 + 1; ++k) 
+    // 	for(l = 0; l < 20; ++l) 
+    // 		statistics[k][l] = 0;
 
 #pragma endscop
 }

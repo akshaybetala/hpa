@@ -62,8 +62,24 @@ extern int origin;
 void loop()
 {
 #pragma scop
-
+/*
     for(lunch = 0; lunch < 10; lunch++) if(current_owl_data -> lunch[lunch] == origin && current_owl_data -> lunch_defense_point[lunch] == 0) return 0;
+*/
+
+// loop reversal
+
+    int *l = &(current_owl_data -> lunch);
+    int *ldp = &(current_owl_data -> lunch_defense_point);
+    int cond[10];
+
+    for(lunch = 0; lunch < 10; lunch++) 
+        cond[lunch] = (current_owl_data -> lunch[lunch] == origin && current_owl_data -> lunch_defense_point[lunch] == 0); 
+
+    for(lunch = 0; lunch < 10; lunch++)
+        if(cond[lunch])
+            return;
+
+
 
 #pragma endscop
 }

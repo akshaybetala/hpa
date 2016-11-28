@@ -46,7 +46,7 @@ extern int  delta[8] ;
 void loop()
 {
 #pragma scop
-
+/*
     for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) if(board[ii] != 3 && q -> safe[ii])
         {
             int k;
@@ -61,6 +61,27 @@ void loop()
                 }
             }
         }
+*/
+
+    for(ii = 21; ii <400; ii++) if(board[ii] != 3 && q -> safe[ii])
+        {
+            int k;
+            for(k = 0; k < 8; k++)
+            {
+                int d = delta[k];
+                if(board[ii + d] != 3 && !q -> safe[ii + d])
+                {
+                    float reduction =(k < 4?0.25 : 0.65);
+                    if(board[ii] == 2) q -> white_permeability[ii + d] *= reduction;
+                    else q -> black_permeability[ii + d] *= reduction;
+                }
+            }
+        }
+
+
+
+
+
 
 #pragma endscop
 }
