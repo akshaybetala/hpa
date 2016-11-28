@@ -5,5 +5,5 @@ for i in *.novec;do
 		a=`perf stat -e $event  ./$i ./input 5 2>&1 | grep $event | sed -e 's/^[ \t]*//' | sed 's/ .*//'` 
 		result="$result$a		"
 	done
-	echo $result >> stat.csv
+	echo $result >> stat.tsv
 done
