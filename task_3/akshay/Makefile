@@ -1,7 +1,7 @@
 SRCS = $(wildcard *.c)
 
 LOOPCOLLECTIONDIR=/home/prakula/hpa/task_3/akshay
-HEADERFILEDIR=../input
+HEADERFILEDIR=$(LOOPCOLLECTIONDIR)/input
 TIMERDIR=$(LOOPCOLLECTIONDIR)/common
 DUMMYDIR=$(LOOPCOLLECTIONDIR)/common
 CC=gcc
