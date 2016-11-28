@@ -10,7 +10,9 @@ void loop()
 {
 #pragma scop
 
-    for(k = 0; k < num_stones; k++) if(aa_status[stones[k]] != 3) return aa_status[stones[k]];
+    for(k = 0; k < num_stones && aa_status[stones[k]] == 3; k++);
+
+    if(k<num_stones) return aa_status[stones[k]];
 
 #pragma endscop
 }

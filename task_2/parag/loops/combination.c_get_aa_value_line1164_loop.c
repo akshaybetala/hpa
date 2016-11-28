@@ -13,7 +13,9 @@ void loop()
 
     // for(k = 0; k < num_stones; k++)
     // 	value += aa_values[stones[k]];
+	int i = 0;
 	for(k = num_stones - 1; k > 0; k--)
-    	value += aa_values[stones[k]];
+    	i += aa_values[stones[k]];
+   	value +=i;
 #pragma endscop
 }

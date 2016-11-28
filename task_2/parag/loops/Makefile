@@ -1,6 +1,6 @@
 SRCS = $(wildcard *.c)
 
-LOOPCOLLECTIONDIR=/home/parag/hpa/task_2/parag/loops
+LOOPCOLLECTIONDIR=/home/akshay/hpa/task_2/parag/loops
 HEADERFILEDIR=$(LOOPCOLLECTIONDIR)/input
 TIMERDIR=$(LOOPCOLLECTIONDIR)/common
 DUMMYDIR=$(LOOPCOLLECTIONDIR)/common

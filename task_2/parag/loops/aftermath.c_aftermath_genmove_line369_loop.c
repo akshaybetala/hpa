@@ -11,22 +11,18 @@ extern int  distance[20 * 20] ;
 void loop()
 {
 #pragma scop
-	int temp[4];
-	int x = distance[move] - 1;
-	for(k = 0; k < 4; k++){
-		int pos2 = move + delta[k];
-        temp[k] = (board[pos2] == 0 && distance[pos2] == x);
-	}
-	for(k = 0; k < 4; k++)
+    
+    int d = distance[move] - 1;
+    for(k = 0; k < 4; k++)
     {
         int pos2 = move + delta[k];
-        if(temp[k])
+        if(board[pos2] == 0 && distance[pos2] == d)
         {
             move = pos2;
             break;
         }
     }
-
+    
 
     // for(k = 0; k < 4; k++)
     // {

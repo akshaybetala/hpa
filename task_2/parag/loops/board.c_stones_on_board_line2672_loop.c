@@ -19,12 +19,8 @@ void loop()
 
     for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++)
     {
-        if(board[pos] == 1) white_stones++;
-    }
-
-    for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++)
-    {
-        if(board[pos] == 2) black_stones++;
+        white_stones+= (board[pos] == 1);
+        black_stones+=(board[pos] == 2);
     }
 
 #pragma endscop

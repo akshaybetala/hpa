@@ -22,43 +22,73 @@ extern int queue_end;
 void loop()
 {
 #pragma scop
-    int temp[8];
-    int count = 0;
-    for(; d < 8; d++) 
-        if(board[ii + delta[d]] != 3){
-            if(!safe[ii + delta[d]] &&(deltai[d] * delta_i + deltaj[d] * delta_j > 0 || queue_start == 1))
+    // int temp[8];
+    // int count = 0;
+    // for(; d < 8; d++) 
+    //     if(board[ii + delta[d]] != 3){
+    //         if(!safe[ii + delta[d]] &&(deltai[d] * delta_i + deltaj[d] * delta_j > 0 || queue_start == 1))
+    //         {
+    //             temp[count] = d;
+    //             count++;
+    //         }
+    //     }
+    // for(int x =0; x < count;x++){
+    //     int y = temp[x];
+    //     int index= ii + delta[y];
+
+    //             // if(!safe[index] &&(deltai[y] * delta_i + deltaj[y] * delta_j > 0 || queue_start == 1))
+    //             // {
+    //     int contribution;
+    //     int permeability = permeability_array[ii];
+    //     permeability = permeability *((permeability_array[ii +(deltai[y] *(19 + 1) + 0)] < permeability_array[ii +(0 *(19 + 1) + deltaj[y])]?permeability_array[ii +(0 *(19 + 1) + deltaj[y])] : permeability_array[ii +(deltai[y] *(19 + 1) + 0)])) /(1 << 12);
+    //     if(permeability == 0) continue;
+        
+    //     contribution = current_strength * permeability /(1 << 12);
+    //     if(queue_start != 1)
+    //     {
+    //         int a = deltai[y] * delta_i + deltaj[y] * delta_j;
+    //         contribution *= a * a;
+    //         contribution = b * contribution /(1 << 12);
+    //     }
+    //     if(contribution <=((int )(0.02 *(1 << 12))) + 0.5) continue;
+    //     if(working[index] == 0)
+    //     {
+    //         queue[queue_end] = index;
+    //         queue_end++;
+    //     }
+    //     working[index] += contribution;
+    //             // }
+    // }
+
+    for(; d < 8; d++)
+    {
+         if((board[ii + delta[d]] != 3) && !safe[ii + delta[d]])
+        {
+            if(deltai[d] * delta_i + deltaj[d] * delta_j > 0 || queue_start == 1)
             {
-                temp[count] = d;
-                count++;
+                int contribution;
+                int permeability = permeability_array[ii];
+                permeability = permeability *((permeability_array[ii +(deltai[d] *(19 + 1) + 0)] < permeability_array[ii +(0 *(19 + 1) + deltaj[d])]?permeability_array[ii +(0 *(19 + 1) + deltaj[d])] : permeability_array[ii +(deltai[d] *(19 + 1) + 0)])) /(1 << 12);
+                if(permeability == 0) continue;
+                contribution = current_strength * permeability /(1 << 12);
+                
+                if(queue_start != 1)
+                {
+                    int a = deltai[d] * delta_i + deltaj[d] * delta_j;
+                    contribution *= a * a;
+                    contribution = b * contribution /(1 << 12);
+                }
+                if(contribution <=((int )(0.02 *(1 << 12))) + 0.5) continue;
+                if(working[ii + delta[d]] == 0)
+                {
+                    queue[queue_end] = ii + delta[d];
+                    queue_end++;
+                }
+                working[ii + delta[d]] += contribution;
             }
         }
-    for(int x =0; x < count;x++){
-        int y = temp[x];
-        int index= ii + delta[y];
-
-                // if(!safe[index] &&(deltai[y] * delta_i + deltaj[y] * delta_j > 0 || queue_start == 1))
-                // {
-        int contribution;
-        int permeability = permeability_array[ii];
-        permeability = permeability *((permeability_array[ii +(deltai[y] *(19 + 1) + 0)] < permeability_array[ii +(0 *(19 + 1) + deltaj[y])]?permeability_array[ii +(0 *(19 + 1) + deltaj[y])] : permeability_array[ii +(deltai[y] *(19 + 1) + 0)])) /(1 << 12);
-        if(permeability == 0) continue;
-        
-        contribution = current_strength * permeability /(1 << 12);
-        if(queue_start != 1)
-        {
-            int a = deltai[y] * delta_i + deltaj[y] * delta_j;
-            contribution *= a * a;
-            contribution = b * contribution /(1 << 12);
-        }
-        if(contribution <=((int )(0.02 *(1 << 12))) + 0.5) continue;
-        if(working[index] == 0)
-        {
-            queue[queue_end] = index;
-            queue_end++;
-        }
-        working[index] += contribution;
-                // }
     }
+
 
 
     // for(; d < 8; d++) if(board[ii + delta[d]] != 3) do

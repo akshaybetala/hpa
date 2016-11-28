@@ -17,7 +17,7 @@ extern int something_found;
 void loop()
 {
 #pragma scop
-
+/*
     for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++)
     {
         if(board[pos] != 3 && distance[pos] == - 1)
@@ -48,6 +48,48 @@ void loop()
             }
         }
     }
+*/
+
+// loop unswitching ? not sure of name
+
+    for(pos = 19 + 2; pos <(19 + 1) *(19 + 1); pos++){
+        if(board[pos] != 3 && distance[pos] == - 1){    
+            if(d > 0 && board[pos] == other){
+                for(k = 0; k < 4; k++){
+                    int pos2 = pos + delta[k];
+                    if((board[pos2] == 3) && !(d == 0 || board[pos2] == 0) && distance[pos2] == d) continue;
+            
+                    distance[pos] = d + 1;
+                    if(closest_opponent == 0) closest_opponent = pos;
+                }
+            }
+            else if(d > 0 && board[pos] == color)
+            {
+                for(k = 0; k < 4; k++){
+                    int pos2 = pos + delta[k];
+                    if((board[pos2] == 3) && !(d == 0 || board[pos2] == 0) && distance[pos2] == d) continue;
+                    distance[pos] = d + 1;
+                    if(closest_own == 0) closest_own = pos;
+                }
+            }
+            else if(board[pos] == 0)
+            {
+                for(k = 0; k < 4; k++){
+                    int pos2 = pos + delta[k];
+                    if((board[pos2] == 3) && !(d == 0 || board[pos2] == 0) && distance[pos2] == d) continue;
+                    distance[pos] = d + 1;
+                    something_found = 1;
+                }
+                
+            }
+            
+        
+        }
+    }
+
+
+
+
 
 #pragma endscop
 }

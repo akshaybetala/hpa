@@ -16,14 +16,24 @@ void loop()
     // for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) 
     // 	if(board[ii] != 3 && goal[ii]) 
     // 		(queue[queue_end++] = ii , mx[ii] = 1);
+
 	int cond[400];
     for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) 
     	cond[ii] = (board[ii] != 3 && goal[ii]);
+
     for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++){ 
     	if(!cond[ii]) continue;
     	(queue[queue_end++] = ii , mx[ii] = 1);
     }
 
+    // int cond;
+    // for(ii = 19 + 2; ii <(19 + 1) *(19 + 1); ii++) 
+    // {
+    //     cond = (board[ii] != 3 && goal[ii]);
+    //     mx[ii] = cond + (1-cond)*mx[ii];
+    //     queue_end+=cond;
+    //     queue[queue_end] = ii*cond + (1-cond)*queue[queue_end];        
+    // }
 
 
 #pragma endscop

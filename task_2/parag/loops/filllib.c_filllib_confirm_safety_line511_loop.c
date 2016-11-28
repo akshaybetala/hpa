@@ -13,11 +13,19 @@ void loop()
 {
 #pragma scop
 
-    for(k = 0; k < 4; k++) if(board[move + delta[k]] == color)
-        {
-            apos = move + delta[k];
-            break;
-        }
+    // for(k = 0; k < 4; k++) if(board[move + delta[k]] == color)
+    //     {
+    //         apos = move + delta[k];
+    //         break;
+    //     }
+	int cond =1;
+    for(k = 0; k < 4; k++) {
+    	if(board[move + delta[k]] == color && cond)
+	    {
+	        apos = move + delta[k];
+	        cond=0;
+	    }
+	}
 
 #pragma endscop
 }

@@ -24,7 +24,7 @@ void loop()
         // pos = next_stone[pos];
     }
 		
-    //for(k = 0; k < maxstones && k < size; k++)
+    // for(k = 0; k < maxstones && k < size; k++)
 	// {
  //        stones[k] = pos;
  //        pos = next_stone[pos];
