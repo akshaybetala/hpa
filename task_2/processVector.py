@@ -13,7 +13,8 @@ def write_to_csv(d, fileName):
 	('MeanCycle_fvec','>i4'), ('MeanCycle_novec','>i4'), ('MeanCycle_vec','>i4'), ('Vector','|S100'),('factor','|S100')]
 	result = np.empty( (len(d),), dtype=dtype)
 	i = 0
-	for k, v in d.items():
+	for k in sorted(d):
+		v = d[k]
 		r = (k, v['Dependency']['RAR'], v['Dependency']['RAW'], v['Dependency']['TotalNumberOfDependencies'], v['Dependency']['WAR'], v['Dependency']['WAW'], \
 			v['MeanCycle_fvec'], v['MeanCycle_novec'] , v['MeanCycle_vec'],v['Vector'][0],  v['Vector'][1])
 		result[i] = r
@@ -29,11 +30,7 @@ def write_to_csv(d, fileName):
 	# 	result[i] = r
 	# 	i+=1	
 
-
-
 	df = pd.DataFrame(result)
-	
-
 	df.to_csv(fileName,header=True)
 	return df
 	#df = df[df['MeanCycle_vec']!=-1]
