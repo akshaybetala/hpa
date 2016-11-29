@@ -1,28 +1,28 @@
-,fname,MeanCycle_fvec,MeanCycle_novec,MeanCycle_vec,Vector,factor
-0,aftermath.c_aftermath_genmove_line142,40623,31777,30532,False,Vectorization not profitable
-1,aftermath.c_aftermath_genmove_line173,4314,31123,3678,True,3.640
-2,aftermath.c_aftermath_genmove_line369,284,249,679,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-3,aftermath.c_play_aftermath_line934,5018,18867,5553,True,4.470
-4,aftermath.c_play_aftermath_line960,1,1,1,False,Dependence present (Any type)
-5,board.c_clear_board_line404,40765,55553,36727,True,1.160
-6,board.c_count_common_libs_line1956,1170,1210,1052,True,2.540
-7,board.c_findstones_line2121,157,184,149,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-8,board.c_get_last_opponent_move_line998,784,2089,614,True,2.130
-9,board.c_new_position_line2741,3723,16920,2259,True,6.150
-10,board.c_stones_on_board_line2672,1,1,1,True,2.970
-11,board.c_test_gray_border_line434,1,1,1,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-12,cache.c_hashtable_partially_clear_line317,589,2982,556,True,4.460
-13,combination.c_get_aa_status_line555,149,193,129,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-14,combination.c_get_aa_value_line1164,246,119,119,False,Vectorization not profitable
-15,dragon.c_compute_surrounding_moyo_sizes_line1968,1868,12997,1821,True,5.080
-16,dragon.c_connected_to_eye_line1292,889,619,1032,True,2.060
-17,dragon.c_crude_dragon_weakness_line2057,190,178,321,False,Vectorization not profitable
-18,dragon.c_dragon_escape_line1729,20435,40635,20196,True,4.550
-19,filllib.c_filllib_confirm_safety_line511,1,1,1,False,Dependence present (Any type)
-20,fuseki.c_openregion_line72,1703,1814,1271,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
-21,fuseki.c_set_symmetries_line89,1,1,1,False,Inner loop was already vectorized
-22,hash.c_hashdata_recalc_line196,29312,45805,32481,True,1.490
-23,influence.c_accumulate_influence_line178,1681,7340,1538,True,4.620
-24,influence.c_accumulate_influence_line277,747,579,669,False,Dependence present (Any type)
-25,influence.c_accumulate_influence_line285,360,315,202,False,Dependence present (Any type)
-26,influence.c_accumulate_influence_line296,7373,7706,5136,True,2.610
+,fname,MeanCycle_fvec,MeanCycle_novec,Vector
+0,aftermath.c_aftermath_genmove_line142,34108,29256,False
+1,aftermath.c_aftermath_genmove_line173,4178,27576,True
+2,aftermath.c_aftermath_genmove_line369,288,259,False
+3,aftermath.c_play_aftermath_line934,5055,18853,True
+4,aftermath.c_play_aftermath_line960,1,1,False
+5,board.c_clear_board_line404,34012,58085,True
+6,board.c_count_common_libs_line1956,1047,1213,True
+7,board.c_findstones_line2121,151,137,False
+8,board.c_get_last_opponent_move_line998,646,1170,True
+9,board.c_new_position_line2741,2357,16409,True
+10,board.c_stones_on_board_line2672,1,1,True
+11,board.c_test_gray_border_line434,1,1,False
+12,cache.c_hashtable_partially_clear_line317,558,2634,True
+13,combination.c_get_aa_status_line555,129,126,False
+14,combination.c_get_aa_value_line1164,126,119,False
+15,dragon.c_compute_surrounding_moyo_sizes_line1968,1739,12747,True
+16,dragon.c_connected_to_eye_line1292,719,679,True
+17,dragon.c_crude_dragon_weakness_line2057,204,224,False
+18,dragon.c_dragon_escape_line1729,15432,34240,True
+19,filllib.c_filllib_confirm_safety_line511,1,1,False
+20,fuseki.c_openregion_line72,1366,1338,False
+21,fuseki.c_set_symmetries_line89,1,1,False
+22,hash.c_hashdata_recalc_line196,27483,42132,True
+23,influence.c_accumulate_influence_line178,1464,6906,True
+24,influence.c_accumulate_influence_line277,640,528,False
+25,influence.c_accumulate_influence_line285,261,217,False
+26,influence.c_accumulate_influence_line296,5398,6896,True

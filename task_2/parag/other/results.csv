@@ -1,0 +1,28 @@
+,fname,MeanCycle_fvec,MeanCycle_novec,MeanCycle_vec,Vector,factor
+0,aftermath.c_aftermath_genmove_line142,161270,158035,158822,False,Dependence present (Any type)
+1,aftermath.c_aftermath_genmove_line173,3839,28717,6351,True,3.640
+2,aftermath.c_aftermath_genmove_line369,540,472,454,False,Vectorization not profitable
+3,aftermath.c_play_aftermath_line934,5107,18471,4963,True,4.470
+4,aftermath.c_play_aftermath_line960,1,1,1,False,Dependence present (Any type)
+5,board.c_clear_board_line404,35622,59483,33637,True,1.160
+6,board.c_count_common_libs_line1956,1057,1208,1050,True,2.540
+7,board.c_findstones_line2121,161,173,146,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+8,board.c_get_last_opponent_move_line998,601,1409,631,True,2.130
+9,board.c_new_position_line2741,2326,15878,2212,True,6.150
+10,board.c_stones_on_board_line2672,1,1,1,True,6.360
+11,board.c_test_gray_border_line434,1,1,1,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+12,cache.c_hashtable_partially_clear_line317,608,2879,580,True,4.460
+13,combination.c_get_aa_status_line555,134,125,130,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+14,combination.c_get_aa_value_line1164,196,104,105,False,Vectorization not profitable
+15,dragon.c_compute_surrounding_moyo_sizes_line1968,1783,12496,1794,True,5.080
+16,dragon.c_connected_to_eye_line1292,800,662,666,True,2.060
+17,dragon.c_crude_dragon_weakness_line2057,268,192,279,False,Vectorization not profitable
+18,dragon.c_dragon_escape_line1729,16424,35091,15267,True,4.550
+19,filllib.c_filllib_confirm_safety_line511,1,1,1,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+20,fuseki.c_openregion_line72,1327,1214,1286,False,   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it m
+21,fuseki.c_set_symmetries_line89,1,1,1,False,Inner loop was already vectorized
+22,hash.c_hashdata_recalc_line196,27889,41490,27190,True,1.490
+23,influence.c_accumulate_influence_line178,1320,6846,1405,True,4.620
+24,influence.c_accumulate_influence_line277,541,541,555,False,Dependence present (Any type)
+25,influence.c_accumulate_influence_line285,239,213,235,False,Dependence present (Any type)
+26,influence.c_accumulate_influence_line296,6225,6867,5207,True,2.610

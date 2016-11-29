@@ -20,12 +20,12 @@ def write_to_csv(d, fileName):
 	# 	i+=1	
 
 	dtype=[('fname','|S100'), \
-	('MeanCycle_fvec','>i4'), ('MeanCycle_novec','>i4'), ('MeanCycle_vec','>i4'), ('Vector','|S100'),('factor','|S100')]
+	('MeanCycle_fvec','>i4'), ('MeanCycle_novec','>i4'), ('Vector','|S100')]
 	result = np.empty( (len(d),), dtype=dtype)
 	i = 0
 	for k in sorted(d):
 		v = d[k]
-		r = (k, v['MeanCycle_fvec'], v['MeanCycle_novec'] ,v['MeanCycle_vec'], v['Vector'][0],  v['Vector'][1])
+		r = (k, v['MeanCycle_fvec'], v['MeanCycle_novec'], v['Vector'])
 		result[i] = r
 		i+=1	
 
@@ -131,7 +131,7 @@ def isVectorized(fileName):
 def main(folder, plutoLocation):
 
 	os.chdir(folder)
-	makeClean = runCommand("make clean")
+	# makeClean = runCommand("make clean")
 	makeVec = runCommand("make vec CC=icc")
 	
 	# Keep the dependency information (in a text file) it will serve you for future tasks.
@@ -155,10 +155,10 @@ def main(folder, plutoLocation):
 
 		if name not in fileMap:
 			fileMap[name] = dict()
-		fileMap[name]["Vector"] = [res, reason]
+		fileMap[name]["Vector"] = res
 
-	for fileType in ["*.vec", "*.fvec", "*.novec"]:
-		makeClean = runCommand("make clean")
+	for fileType in ["*.fvec", "*.novec"]:
+		# makeClean = runCommand("make clean")
 		fType = fileType.split('.')[-1]
 		command = "make " + fType + " CC=icc"
 		runCommand(command)
@@ -214,7 +214,7 @@ def main(folder, plutoLocation):
 
 if __name__ == '__main__':
 	# Location of extractedLoops
-	folder = "/home/akshay/hpa/task_2/parag/loops/"
+	folder = "/home/parag/hpa/task_2/parag/loops"
 
 	# Location of polycc executable
 	plutoLocation = "/home/akshay/Tool/pluto-0.11.4/polycc"
